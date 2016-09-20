@@ -27,3 +27,5 @@ $('.owl-carousel-product .owl-dot').each(function(){
   $(this).text(i);
   i++;
 });
+
+$('.box').matchHeight();
