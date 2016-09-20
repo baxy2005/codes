@@ -1,9 +1,9 @@
 /* Scss Document */
 
-$color-primary: #E45639;
-$color-secondary: #F8CF22;
+$color-primary: #f4633a;
+$color-secondary: #faf4e8;
 $color-tertiary: #796B9C;
-$color-black: #000000;
+$color-black: #282828;
 $color-white: #FFFFFF;
 
 
@@ -33,7 +33,9 @@ $fade-color-secondary: tint( $color-secondary, 50%);
 $opacity-color-primary: rgba($color-primary,0.95);
 $opacity2-color-primary: rgba($color-primary,0.80);
 
-$font-primary: evelethclean_regular, sans-serif;
-$font-primary-thin: evelethclean_thin, sans-serif;
+$font-primary: Gotham-SSm-Light, sans-serif;
+$font-primary-book: Gotham-SSm-Book, sans-serif;
+$font-primary-bold: Gotham-SSm-Bold, sans-serif;
+$font-primary-medium: Gotham-SSm-Medium, sans-serif;
 $font-secondary: ProximaNova-Medium, sans-serif;
 $font-primaryLight: Sica-Light, sans-serif;

@@ -1,18 +1,151 @@
 /* Scss Document */
 
+@font-face {
+  font-family: 'Gotham-SSm-Bold';
+  src: url('../fonts/GothamSSm-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamSSm-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GothamSSm-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GothamSSm-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GothamSSm-Bold.svg#2d4c04ad501ccd8fd63c7744e6332ac7') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Gotham-SSm-Book';
+  src: url('../fonts/GothamSSm-Book.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamSSm-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GothamSSm-Book.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GothamSSm-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GothamSSm-Book.svg#b023882e0f43bac53e5b35d838212ecd') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Gotham-SSm-Light';
+  src: url('../fonts/GothamSSm-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamSSm-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GothamSSm-Light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GothamSSm-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GothamSSm-Light.svg#3f14124d1aa4bfd588675ccc394cccd1') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+@font-face {
+  font-family: 'Gotham-SSm-Medium';
+  src: url('../fonts/GothamSSm-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamSSm-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GothamSSm-Medium.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GothamSSm-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GothamSSm-Medium.svg#2847365852e4856c75571e07f7ba953a') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+
 @import "compass/css3";
 @import "variables";
 @import "mixins";
-
+@import "header";
+@import "main-carousel";
+@import "footer";
 
 body{
 	text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	font-family: $font-primary;
 }
 /*-------------------------------------------
 general
 -------------------------------------------*/
+a {
+	color: $color-primary;
+}
+a:hover, a:focus {
+	color: $color-black;
+}
+.btn {
+	font-family: $font-primary-book;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: $color-primary;
+	border: 2px solid $color-primary;
+	border-radius: 0;
+	height: 40px;
+	min-width: 217px;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.btn-default:hover {
+	background-color: $color-primary;
+	color: $color-white;
+	border: 2px solid $color-primary;
+}
+/*-------------------------------------------
+opening project gallery
+-------------------------------------------*/
+
+
+.project-gallery, .product, .services {
+	h1 {
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 13px;
+	}
+	.row:first-child {
+		display: flex;
+		.col-xs-12 {
+			display: flex;
+			align-items: center;
+		}
+	}
+	.row	 {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9,
+	.col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.row:last-child {
+		display: flex;
+		align-items: center;
+		.col-xs-12 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+/*-------------------------------------------
+opening product gallery
+-------------------------------------------*/
+ .product, .services {
+	 .row:first-child {
+		 .col-xs-12 {
+			 height: 210px;
+		 }
+	 }
+	 .row:last-child {
+		 display: block;
+		 .col-xs-12 {
+			 display: block;
+		 }
+	 }
+
+ }
 
 /*social icons*/
 .social-icons {
