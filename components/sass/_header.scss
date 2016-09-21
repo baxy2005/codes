@@ -148,9 +148,11 @@ navbar styles
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: transparent;
 }
-
-.navmenu-fixed-left, .navmenu-fixed-right, .navbar-offcanvas {
-  top: 77px
+.offcanvas.in {
+  margin-top: 77px;
+}
+.navmenu, .navbar-offcanvas {
+  width: 320px;
 }
 .navmenu-default, .navbar-default .navbar-offcanvas {
   background-color: $color-secondary;
