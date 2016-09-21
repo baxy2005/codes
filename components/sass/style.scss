@@ -90,13 +90,28 @@ a:hover, a:focus {
 	color: $color-white;
 	border: 2px solid $color-primary;
 }
+
+.btn.btn-overlay {
+  color: $color-white;
+  background-color: $color-primary;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.form-control {
+  border: 2px solid $color-black;
+  border-radius: 0px;
+}
+.form-control:focus {
+  border-color: $color-primary;
+  }
 /*-------------------------------------------
 opening project gallery
 -------------------------------------------*/
 
 
 
-.project-gallery, .product, .services {
+.project-gallery, .product, .services, .company, .magazine {
 	h1 {
 		text-transform: uppercase;
 		margin-bottom: 20px;
@@ -154,37 +169,168 @@ opening product gallery
 			 display: block;
 		 }
 	 }
-
  }
 
-/*social icons*/
-.social-icons {
-	text-align: center;
+ /*-------------------------------------------
+ opening company
+ -------------------------------------------*/
+
+.company {
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  .col-xs-12:first-child {
+    display: inherit;
+  }
+  .col-xs-12:last-child {
+    margin-top: -40px;
+  }
+  .col-xs-12:nth-child(2) {
+    @include centerCenter;
+  }
+  .img-responsive {
+    width: auto;
+    max-width: 100%;
+  }
+.hovereffect {
+  height: 144px;
+  width: 144px;
+  border-radius: 150px;
+  float: none;
+  margin: 0 auto;
+  h2 {
+    font-family: $font-primary-medium;
+  	font-size: 13px;
+    line-height: 120%;
+    margin: 0;
+  }
+  .overlay {
+    width: 147px;
+    height: 147px;
+    right: 0;
+    background-color: rgba($color-primary,0.7);
+    @include centerCenter;
+  }
+}
+}
+/*-------------------------------------------
+opening magazine
+-------------------------------------------*/
+
+
+.magazine {
+  margin-top: 100px;
+  .hovereffect {
+    height: auto;
+  }
+  .magazine-box {
+    background-color: $color-white;
+    padding: 20px;
+    clear: both;
+    height: 200px;
+    @media (min-width: 1280px) {
+      height: 237.5px;
+      }
+    h4 {
+      font-family: $font-primary-medium;
+      margin-top: 0;
+      margin-bottom: 17px;
+      line-height: 120%;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .hovereffect:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background: $color-white;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: -10px;
+    z-index: 15;
+   }
+   .col-xs-12:nth-child(3) {
+      .hovereffect:before {
+         bottom: -10px;
+         top: auto;
+      }
+   }
+  .overlay {
+  @include centerCenter;
+  }
+  .col-xs-12:nth-child(4) {
+    margin-top: -200px;
+    @media (min-width: 1280px) {
+      margin-top: -237.5px;
+      }
+  }
+  .col-xs-12:nth-child(5), .col-xs-12:nth-child(1)  {
+    height: 200px;
+    @media (min-width: 1280px) {
+      height: 237.5px;
+      }
+
+  }
 }
 
-.social-icons .fa {
-	font-size: 2em;
+/*-------------------------------------------
+opening contact
+-------------------------------------------*/
+.contact {
+  text-transform: uppercase;
+  h3 {
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  address strong {
+    margin-bottom: 0;
+    display: block;
+  }
+  .btn-overlay {
+    width:  100%;
+  }
 }
-.social-icons .fa {
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-	background: red;
-	color: white;
-	&:hover {
-	background: gray;
-	}
-}
-.social-icons  .nav
-li {
-	display: inline-block;
-	margin: 0px 5px;
-a {
-	padding: 0px;
-&:hover  {
-	background: transparent;
-}
-}
+.contact, .social-opening {
+  .row	 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9,
+  .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  /*social icons*/
+  .social-icons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    .fa {
+      font-size: 3.2em;
+    	width: 70px;
+    	height: 70px;
+    	text-align: center;
+    	background: $color-secondary;
+    	color: white;
+      @include centerCenter;
+      margin-right: 15px;
+    	&:hover {
+    	background: $dark-color-secondary;
+    	}
+    }
+  }
+  .nav.social-icons > li > a:hover, .nav.social-icons > li > a:focus {
+    background-color: transparent;
+  }
+  .nav.social-icons > li > a {
+    padding: 0;
+  }
 }

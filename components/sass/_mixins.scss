@@ -52,3 +52,8 @@ background: darken($color-secondary, 10% );
 	margin:0px;
 }
 
+@mixin centerCenter {
+display: flex;
+justify-content: center;
+align-items: center;
+}
