@@ -122,8 +122,6 @@ transform:translatey(0);
 }
 
 .hovereffect:hover a.info {
--webkit-transition-delay:.2s;
-transition-delay:.2s;
 }
 
 /*
@@ -207,4 +205,121 @@ align-items: center;
     color: $color-primary;
     font-family: $font-primary-bold;
   }
+}
+
+/*
+---------------------------------------------------------
+navbar menu
+---------------------------------------------------------
+*/
+.navmenu-nav {
+margin-top: 9px;
+}
+.dropdown{
+  span {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 999 !important;
+  }
+}
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  position: relative;
+  margin-bottom: 10px;
+}
+.navmenu-default .navmenu-nav {
+  li > a {
+    padding: 6px 40px;
+    color: $color-black;
+    text-transform: uppercase;
+    font-size: 12px;
+
+  }
+}
+.navmenu-default .navmenu-nav > li > a:hover, .navbar-default .navbar-offcanvas .navmenu-nav > li > a:hover, .navmenu-default .navmenu-nav > li > a:focus, .navbar-default .navbar-offcanvas .navmenu-nav > li > a:focus {
+  border-right: solid 2px $color-primary;
+  color: $color-primary;
+  background-color: transparent;
+}
+.navmenu-default .navmenu-nav > .active > a, .navbar-default .navbar-offcanvas .navmenu-nav > .active > a, .navmenu-default .navmenu-nav > .active > a:hover, .navbar-default .navbar-offcanvas .navmenu-nav > .active > a:hover, .navmenu-default .navmenu-nav > .active > a:focus, .navbar-default .navbar-offcanvas .navmenu-nav > .active > a:focus {
+    color: $color-primary;
+    background-color: transparent;
+}
+.navmenu-default .navmenu-nav > .open > a, .navbar-default .navbar-offcanvas .navmenu-nav > .open > a, .navmenu-default .navmenu-nav > .open > a:hover, .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover, .navmenu-default .navmenu-nav > .open > a:focus, .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus {
+    background-color: transparent;
+    color: $color-primary;
+}
+.open > .dropdown-menu {
+    width: 100%;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    text-decoration: none;
+    color: $color-primary;
+    background-color: transparent;
+    border-right: solid 2px $color-primary;
+}
+
+.navmenu-default .navmenu-nav .dropdown-menu {
+  li > a {
+    padding: 6px 60px;
+
+  }
+}
+.navmenu {
+  /*social icons*/
+  .social-icons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 40px;
+    .fa {
+      font-size: 2em;
+      width: 43px;
+      height: 43px;
+      text-align: center;
+      background: $color-white;
+      color: $color-secondary;
+      @include centerCenter;
+      margin-right: 10px;
+      &:hover {
+      background: $color-primary;
+      color: $color-white;
+      }
+    }
+  }
+  .nav.social-icons > li > a:hover, .nav.social-icons > li > a:focus {
+    background-color: transparent;
+  }
+  .nav.social-icons > li > a {
+    padding: 0;
+  }
+form {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+.form-control {
+  border: none;
+  width: 80%;
+  box-shadow: none;
+  height: 40px;
+}
+.btn-default-search{
+  width: 20%;
+  min-width: inherit;
+  border: none;
+}
+.form-group {
+  display: flex;
+}
 }
