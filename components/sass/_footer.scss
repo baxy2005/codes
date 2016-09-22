@@ -2,6 +2,68 @@
 footer {
   background-color: $color-black;
   min-height: 150px;
-  padding-top: 40px;
+  padding: 40px 0;
   color: $mid-color-gray;
+  text-align: center;
+  text-transform: uppercase;
+  @media (min-width: 768px) {
+    text-align: left;
+    }
+  .col-xs-12:first-child {
+    img {
+      width: 128px;
+      height: auto;
+      margin-bottom: 32px;
+      @media (min-width: 768px) {
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+  .nav {
+    margin-top: -5px;
+    @media (min-width: 768px) {
+      margin-top: -5px;
+      }
+      br {
+        display: none;
+        @media (min-width: 768px) {
+          display: inline-block;
+          }
+      }
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+  	color: $color-white;
+  }
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 8px 0px;
+  	color: $light-4-color-white;
+    font-size: 13px;
+
+    @media (min-width: 768px) {
+      padding: 1px 0px;
+      }
+  }
+  .nav > li > a.active {
+    color: $color-primary;
+  }
+  .copyright {
+    p {
+      margin-bottom: 0px;
+      margin-top: 32px;
+      @media (min-width: 768px) {
+        margin-top: 108px;
+        }
+    }
+    br {
+      display: inline-block;
+      @media (min-width: 768px) {
+        display: none;
+        }
+    }
+  }
 }
