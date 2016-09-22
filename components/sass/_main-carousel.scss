@@ -96,6 +96,32 @@ top main carousel hover
 
 
 .top-carousel-container {
+	/*social icons*/
+	.social-icons {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		margin-top: 30px;
+		.fa {
+			font-size: 2em;
+			width: 43px;
+			height: 43px;
+			text-align: center;
+			background: $light-color-white;
+			color: $color-primary;
+			@include centerCenter;
+			margin-right: 10px;
+			&:hover {
+			background: $color-white;
+			}
+		}
+	}
+	.nav.social-icons > li > a:hover, .nav.social-icons > li > a:focus {
+		background-color: transparent;
+	}
+	.nav.social-icons > li > a {
+		padding: 0;
+	}
 	.hovereffect {
     width: 100%;
     height: 100%;
@@ -109,8 +135,14 @@ top main carousel hover
     width: 37.5%;
     position: absolute;
     overflow: hidden;
+		@include centerCenter;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+		text-align: left;
+		color: $color-white;
 	top: 0;
-	padding: 1em;
+	padding: 40px;
 	height: 4.75em;
 	background: $color-primary;
 	color: #3c4a50;
@@ -120,6 +152,19 @@ top main carousel hover
 	transform: translate3d(100%,0,0);
 	height: 100%;
 	left: 62.5%;
+	h3, p {
+		color: $color-white;
+	}
+	h3 {
+		margin-bottom: 24px;
+		line-height: 1.33;
+		text-transform: uppercase;
+	}
+	p{
+		font-size: 13px;
+		 line-height: 1.62;
+		 margin-bottom: 30px
+	}
 }
 
 .hovereffect img {
