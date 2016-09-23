@@ -19,7 +19,7 @@
   <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
     <ul class="nav navmenu-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a href="#">References</a><span class="glyphicon glyphicon-plus" data-toggle="dropdown"></span>
+      <li class="dropdown"><a href="#">References</a><span class="" data-toggle="dropdown"></span>
         <ul class="dropdown-menu">
           <li><a href="#">House</a></li>
           <li><a href="#">Flat</a></li>
@@ -28,11 +28,18 @@
           <li><a href="#">Showroom</a></li>
         </ul>
       </li>
-      <li class="dropdown"><a href="#">Products</a><span class="glyphicon glyphicon-plus" data-toggle="dropdown"></span>
+      <li class="dropdown"><a href="#">Products</a><span class="" data-toggle="dropdown"></span>
         <ul class="dropdown-menu">
           <li><a href="#">Living spaces</a></li>
           <li><a href="#">Types</a></li>
           <li><a href="#">Manufactures</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a href="#">Services</a><span class="" data-toggle="dropdown"></span>
+        <ul class="dropdown-menu">
+          <li><a href="#">interior design</a></li>
+          <li><a href="#">home styling</a></li>
+          <li><a href="#">design service</a></li>
         </ul>
       </li>
       <li><a href="#">Company</a></li>
@@ -47,6 +54,11 @@
         <button type="submit" class="btn btn-default btn-default-search"><i class="fa fa-search"></i></button>
       </div>
     </form>
+    <ul class="nav countries">
+      <li> <a href="#">EUROPE</a></li>
+      <li>|</li>
+      <li> <a href="#">NORTH AMERICA</a></li>
+    </ul>
     <ul class="nav social-icons">
       <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
       <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -56,10 +68,10 @@
   </nav>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="brand-container">
-      <a class="navmenu-brand" href="#"><img src="images/code-logo.png"  alt="" width="117" height="41" ></a>
+      <a class="navmenu-brand" href="#"><img class="brand-image" src="images/code-logo.png"  alt="" ></a>
     </div>
     <div class="button-language-container">
-      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-autohide="false">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -75,154 +87,163 @@
 <div class="container-fluid top-carousel-container">
   <div class="row">
     <div class="col-md-12">
+      <div class="scroll">
+        <a href="#link1"><button type="button" class="btn btn-default btn-scroll"></button></a>
+      </div>
       <div class="owl-carousel top-carousel">
         <div class="item">
-          <div class="hovereffect">
-            <img class="img-responsive" src="images/bb.jpg" alt="">
-            <div class="overlay-2">
-              <h3>B&B Italia</h3>
-              <p>B&B Italia was founded in 1966 by Piero Amborgio Busnelli and is the leading Italian company in the international furnishing market. From the start the firm distinguished itself by taking a ... </p>
-              <button type="button" class="btn btn-default btn-carousel">learn more</button>
-              <ul class="nav social-icons">
-                <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-              </ul>
-            </div>
-          </div>
+          <div class="hovereffect-2">
+            <div class="hover-content">
+              <img class="img-responsive" src="images/bb.jpg" alt="">
+              <div class="overlay-2">
+                <h3>B&B Italia</h3>
+                <p>B&B Italia was founded in 1966 by Piero Amborgio Busnelli and is the leading Italian company in the international furnishing market. From the start the firm distinguished itself by taking a ... </p>
+                <button type="button" class="btn btn-default btn-carousel">learn more</button>
+                <ul class="nav social-icons">
+                  <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                </ul>
+              </div>
+            </div><!--hover-content -->
+          </div><!--hoverefect -->
         </div><!--one carousel item -->
         <div class="item">
-          <div class="hovereffect">
-            <img class="img-responsive" src="images/7.jpg" alt="">
-            <div class="overlay-2">
-              <h3>Maxalto</h3>
-              <p>Maxalto was established in 1975 its collection includes products with shapes drawing inspiration from the typologies and styles of French design between the two World Wars. Maxalto is a line ...   </p>
-              <button type="button" class="btn btn-default btn-carousel">learn more</button>
-              <ul class="nav social-icons">
-                <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          <div class="hovereffect-2">
+            <div class="hover-content">
+              <img class="img-responsive" src="images/7.jpg" alt="">
+              <div class="overlay-2">
+                <h3>Maxalto</h3>
+                <p>Maxalto was established in 1975 its collection includes products with shapes drawing inspiration from the typologies and styles of French design between the two World Wars. Maxalto is a line ...   </p>
+                <button type="button" class="btn btn-default btn-carousel">learn more</button>
+                <ul class="nav social-icons">
+                  <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                </ul>
+              </div>
+            </div><!--hover-content -->
+          </div><!--hoverefect -->
+        </div><!--one carousel item -->
       </div><!--top carousel-->
     </div>
   </div><!--row-->
 </div><!-- top carousel container-->
-<div class="container project-gallery">
-  <div class="row">
-      <div class="col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-6 col-xs-12 box">
-        <div class="info-block">
-          <h1>PROJECT GALLERY</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proineuismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
-        </div>
-      </div><!--one project -->
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+<div class="container-fluid">
+  <div class="container project-gallery">
+    <div class="row">
+        <div class="col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-6 col-xs-12 box" id="link1">
+          <div class="info-block">
+            <h1>PROJECT GALLERY</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proineuismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
+          </div>
+        </div><!--one project -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+            <div class="hovereffect">
+                <img class="img-responsive" src="images/project-gallery/project_1.jpg" alt="">
+                <div class="overlay">
+                   <h2>Családi Villa<br>Németvölgy</h2>
+                   <a class="info" href="#">Read More</a>
+                </div>
+            </div>
+        </div><!--one project -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="hovereffect">
-              <img class="img-responsive" src="images/project-gallery/project_1.jpg" alt="">
+              <img class="img-responsive" src="images/project-gallery/project_2.jpg" alt="">
               <div class="overlay">
-                 <h2>Családi Villa<br>Németvölgy</h2>
+                 <h2>Családi ház<br>Pálvölgy</h2>
                  <a class="info" href="#">Read More</a>
               </div>
           </div>
       </div><!--one project -->
-<!--  </div><!-- row -->
-  <!-- <div class="row">-->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/project-gallery/project_2.jpg" alt="">
-            <div class="overlay">
-               <h2>Családi ház<br>Pálvölgy</h2>
-               <a class="info" href="#">Read More</a>
-            </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="hovereffect">
+              <img class="img-responsive" src="images/project-gallery/project_3.jpg" alt="">
+              <div class="overlay">
+                 <h2>Apartman<br>Gellérthegy</h2>
+                 <a class="info" href="#">Read More</a>
+              </div>
+          </div>
+      </div><!--one project -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="hovereffect">
+              <img class="img-responsive" src="images/project-gallery/project_4.jpg" alt="">
+              <div class="overlay">
+                 <h2>Családi villa<br>Whistler<br>British Columbia,<br>Canada</h2>
+                 <a class="info" href="#">Read More</a>
+              </div>
+          </div>
+      </div><!--one project -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="hovereffect">
+              <img class="img-responsive" src="images/project-gallery/project_5.jpg" alt="">
+              <div class="overlay">
+                 <h2>Családi ház<br>Budapest</h2>
+                 <a class="info" href="#">Read More</a>
+              </div>
+          </div>
+      </div><!--one project -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+          <div class="hovereffect">
+              <img class="img-responsive" src="images/project-gallery/project_6.jpg" alt="">
+              <div class="overlay">
+                 <h2>Családi ház<br>Normafa</h2>
+                 <a class="info" href="#">Read More</a>
+              </div>
+          </div>
+      </div><!--one project -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+        <button type="button" class="btn btn-default">more projects</button>
+      </div><!--one project -->
+    </div><!--row-->
+  </div><!--project gallery-->
+  <div class="container product">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 col-sm-6 col-xs-12">
+        <div class="info-block">
+          <h1>PRODUCTS</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
         </div>
-    </div><!--one project -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/project-gallery/project_3.jpg" alt="">
-            <div class="overlay">
-               <h2>Apartman<br>Gellérthegy</h2>
-               <a class="info" href="#">Read More</a>
-            </div>
-        </div>
-    </div><!--one project -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/project-gallery/project_4.jpg" alt="">
-            <div class="overlay">
-               <h2>Családi villa<br>Whistler<br>British Columbia,<br>Canada</h2>
-               <a class="info" href="#">Read More</a>
-            </div>
-        </div>
-    </div><!--one project -->
-  <!-- </div>row -->
-<!--   <div class="row">-->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/project-gallery/project_5.jpg" alt="">
-            <div class="overlay">
-               <h2>Családi ház<br>Budapest</h2>
-               <a class="info" href="#">Read More</a>
-            </div>
-        </div>
-    </div><!--one project -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
-        <div class="hovereffect">
-            <img class="img-responsive" src="images/project-gallery/project_6.jpg" alt="">
-            <div class="overlay">
-               <h2>Családi ház<br>Normafa</h2>
-               <a class="info" href="#">Read More</a>
-            </div>
-        </div>
-    </div><!--one project -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
-      <button type="button" class="btn btn-default">more projects</button>
-    </div><!--one project -->
-  </div><!--row-->
-</div><!--project gallery-->
-<div class="container product">
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 col-sm-6 col-xs-12">
-      <div class="info-block">
-        <h1>PRODUCTS</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
+      </div><!--one project -->
+    </div><!--row-->
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="owl-carousel-product">
+          <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
+          <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
+          <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
+          <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
+        </div><!--product carousel-->
       </div>
-    </div><!--one project -->
-  </div><!--row-->
-  <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <div class="owl-carousel-product">
-        <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
-        <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
-        <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
-        <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
-      </div><!--product carousel-->
-    </div>
-  </div><!--row-->
-</div><!--product gallery-->
-<div class="container services">
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <div class="info-block">
-        <h1>SERVICES</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
+    </div><!--row-->
+  </div><!--product gallery-->
+  <div class="container services">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="info-block">
+          <h1>SERVICES</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
+        </div>
+      </div><!--one project -->
+    </div><!--row-->
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="owl-carousel-product">
+          <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
+          <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
+          <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
+          <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
+        </div><!--services carousel-->
       </div>
-    </div><!--one project -->
-  </div><!--row-->
-  <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <div class="owl-carousel-product">
-        <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
-        <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
-        <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
-        <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
-      </div><!--services carousel-->
-    </div>
-  </div><!--row-->
-</div><!--services gallery-->
+    </div><!--row-->
+  </div><!--services gallery-->
+  <div class="yellow-box yellow-box-1">
+  </div>
+  <div class="yellow-box yellow-box-2">
+  </div>
+</div><!--container-fluid-->
 <div class="container company">
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
@@ -290,111 +311,119 @@
     </div><!--one button -->
   </div><!--row-->
 </div><!--company-->
-<div class="container magazine">
-  <div class="row">
-      <div class="col-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1 col-sm-6 col-xs-12 box">
+<div class="container-fluid">
+  <div class="container magazine">
+    <div class="row">
+        <div class="col-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1 col-sm-6 col-xs-12 box">
+          <div class="info-block">
+            <h1>MAGAZINE</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proineuismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
+          </div>
+        </div><!--one magazine -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+          <div class="magazine-box">
+            <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+          </div><!-- magazine text-->
+          <div class="hovereffect">
+            <img class="img-responsive" src="images/magazine/code-magazine-tn-01.jpg" alt="">
+            <div class="overlay">
+                <button type="button" class="btn btn-default btn-overlay">read more</button>
+            </div>
+          </div><!-- magazine thumbnail-->
+        </div><!--one magazine -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+          <div class="hovereffect">
+            <img class="img-responsive" src="images/magazine/code-magazine-tn-02.jpg" alt="">
+            <div class="overlay">
+                <button type="button" class="btn btn-default btn-overlay">read more</button>
+            </div>
+          </div><!-- magazine thumbnail-->
+          <div class="magazine-box">
+            <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+          </div><!-- magazine text-->
+        </div><!--one magazine -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+          <div class="hovereffect">
+            <img class="img-responsive" src="images/magazine/code-magazine-tn-03.jpg" alt="">
+            <div class="overlay">
+                <button type="button" class="btn btn-default btn-overlay">read more</button>
+            </div>
+          </div><!-- magazine thumbnail-->
+          <div class="magazine-box">
+            <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+          </div><!-- magazine text-->
+        </div><!--one magazine -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+        <button type="button" class="btn btn-default">more articles</button>
+      </div><!--one magazine -->
+    </div><!--row-->
+  </div><!--magazine -->
+  <div class="yellow-box yellow-box-3">
+  </div>
+</div> <!--container fluid -->
+<div class="container-fluid">
+  <div class="container reach-out">
+    <div class="row">
+      <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-6 col-xs-12">
         <div class="info-block">
-          <h1>MAGAZINE</h1>
+          <h1>REACH OUT</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proineuismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
         </div>
-      </div><!--one magazine -->
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
-        <div class="magazine-box">
-          <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
-        </div><!-- magazine text-->
-        <div class="hovereffect">
-          <img class="img-responsive" src="images/magazine/code-magazine-tn-01.jpg" alt="">
-          <div class="overlay">
-              <button type="button" class="btn btn-default btn-overlay">read more</button>
-          </div>
-        </div><!-- magazine thumbnail-->
-      </div><!--one magazine -->
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
-        <div class="hovereffect">
-          <img class="img-responsive" src="images/magazine/code-magazine-tn-02.jpg" alt="">
-          <div class="overlay">
-              <button type="button" class="btn btn-default btn-overlay">read more</button>
-          </div>
-        </div><!-- magazine thumbnail-->
-        <div class="magazine-box">
-          <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
-        </div><!-- magazine text-->
-      </div><!--one magazine -->
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
-        <div class="hovereffect">
-          <img class="img-responsive" src="images/magazine/code-magazine-tn-03.jpg" alt="">
-          <div class="overlay">
-              <button type="button" class="btn btn-default btn-overlay">read more</button>
-          </div>
-        </div><!-- magazine thumbnail-->
-        <div class="magazine-box">
-          <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
-        </div><!-- magazine text-->
-      </div><!--one magazine -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
-      <button type="button" class="btn btn-default">more articles</button>
-    </div><!--one magazine -->
-  </div><!--row-->
-</div><!--magazine -->
-<div class="container reach-out">
-  <div class="row">
-    <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-6 col-xs-12">
-      <div class="info-block">
-        <h1>REACH OUT</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proineuismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
+      </div><!--text -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <img src="images/reach-out/code-reach-out-tn-01.jpg" alt="">
+        <a href="#"><div class="caption">FEEL FREE TO CONTACT US</div></a>
+      </div><!--one box -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <img src="images/reach-out/code-reach-out-tn-02.jpg" alt="">
+        <a href="#"><div class="caption">READ OUR FAQ SECTION</div></a>
+      </div><!--one box -->
+    </div><!--row-->
+  </div><!--reach-out -->
+  <div class="container contact">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
+        <h3>CONTACTS</h3>
+          <address>
+            <strong>CANADA</strong><br>
+            1706 West 1st Ave (at Pine)<br>
+            Vancouver BC Canada V6J 0E4<br>
+          </address>
+          <address>
+            <a href="mailto:shop@codeshowroom.hu">shop@codeshowroom.hu</a><br><br>
+            877.683.1116
+          </address>
       </div>
-    </div><!--text -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <img src="images/reach-out/code-reach-out-tn-01.jpg" alt="">
-      <div class="caption"> FEEL FREE TO CONTACT US</div>
-    </div><!--one box -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <img src="images/reach-out/code-reach-out-tn-02.jpg" alt="">
-      <div class="caption"> FEEL FREE TO CONTACT US</div>
-    </div><!--one box -->
-  </div><!--row-->
-</div><!--reach-out -->
-<div class="container contact">
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
-      <h3>CONTACTS</h3>
-        <address>
-          <strong>CANADA</strong><br>
-          1706 West 1st Ave (at Pine)<br>
-          Vancouver BC Canada V6J 0E4<br>
-        </address>
-        <address>
-          <a href="mailto:shop@codeshowroom.hu">shop@codeshowroom.hu</a><br><br>
-          877.683.1116
-        </address>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <h3>NEWSLEtteR</h3>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
+          </div>
+          <button type="submit" class="btn btn-default btn-overlay">SUBSCRIBE</button>
+        </form>
+      </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <h3>NEWSLEtteR</h3>
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
-        </div>
-        <button type="submit" class="btn btn-default btn-overlay">SUBSCRIBE</button>
-      </form>
+  </div><!-- contact -->
+  <div class="container social-opening">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
+      <ul class="nav social-icons">
+        <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+      </ul>
     </div>
+    </div>
+  </div><!-- social -->
+  <div class="yellow-box yellow-box-4">
   </div>
-</div><!-- contact -->
-<div class="container social-opening">
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
-    <ul class="nav social-icons">
-      <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
-      <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-      <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-    </ul>
-  </div>
-  </div>
-</div><!-- social -->
+</div><!--container fluid -->
 </main><!--main-->
 <footer>
   <div class="container">

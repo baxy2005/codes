@@ -69,6 +69,7 @@ a {
 }
 a:hover, a:focus {
 	color: $color-black;
+  text-decoration: none;
 }
 .btn {
 	font-family: $font-primary-book;
@@ -83,6 +84,9 @@ a:hover, a:focus {
 	-o-transition: all .2s ease-in;
 	-webkit-transition: all .2s ease-in;
 	transition: all .2s ease-in;
+}
+.btn-default {
+  background-color: transparent;
 }
 .btn-default:hover {
 	background-color: $color-primary;
@@ -104,6 +108,21 @@ a:hover, a:focus {
   background-color: $color-white;
   border: 2px solid $color-white;
 }
+.btn.btn-scroll {
+  background-color: $transparent-color-black;
+  border: 2px solid $color-primary;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  background-image: url(../images/code-spritesheet.png);
+  background-position: -4px 2px;
+}
+.btn.btn-scroll:hover {
+  color: $color-primary;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
+}
+
 .form-group {
     margin-bottom: 10px;
 }
@@ -114,16 +133,22 @@ a:hover, a:focus {
 .form-control:focus {
   border-color: $color-primary;
   }
+  .col-xs-12 {
+    z-index: 2;
+  }
+  .container-fluid {
+  position: relative;
+  }
 /*-------------------------------------------
 opening project gallery
 -------------------------------------------*/
-
 
 
 .project-gallery, .product, .services, .company, .magazine {
 	h1 {
 		text-transform: uppercase;
 		margin-bottom: 20px;
+    margin-top: 0;
 	}
 	p {
 		font-size: 13px;
@@ -313,6 +338,7 @@ opening reach out
   img {
     width: 100%;
   }
+
   .caption {
     width: 100%;
     height: 40px;
@@ -405,4 +431,34 @@ opening contact
 .social-opening {
   margin-top: 75px;
   margin-bottom: 100px;
+}
+
+.yellow-box {
+  z-index: 1;
+  position: absolute;
+  background-color: $color-secondary;
+}
+.yellow-box-4{
+  width: 395px;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+.yellow-box-3{
+  width: 960px;
+ //height: 812px;
+  top: 60px;
+  left: 0px;
+}
+.yellow-box-2{
+  width: 960px;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+}
+.yellow-box-1{
+  width: 100%;
+  height: 130px;
+  top: 0px;
+  right: 0px;
 }

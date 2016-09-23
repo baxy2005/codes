@@ -145,39 +145,55 @@ navbar styles
   }
 }
 
+
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: transparent;
 }
+
+
 .offcanvas.in {
-  margin-top: 77px;
+  padding-top: 77px;
 }
+
 .navmenu, .navbar-offcanvas {
   width: 320px;
 }
+
 .navmenu-default, .navbar-default .navbar-offcanvas {
   background-color: $color-secondary;
   border: none;
 }
+
 .navbar {
   height: 77px;
   margin-bottom: 0px;
 }
+
 .navbar-default {
   background-color: $color-white;
   border: none;
   padding: 0 40px;
 }
+
 .brand-container {
 width: 100%;
 height: 77px;
 display: flex;
 align-items: center;
 }
+
 .navmenu-brand {
   text-align: center;
   margin: 0 auto;
   padding: 0;
   z-index: 2;
+  overflow: hidden;
+  width: 117px;
+  height: 41px;
+  .brand-image {
+    width: 117px;
+    height: 41px;
+  }
 }
 .button-language-container {
   display: flex;
@@ -216,18 +232,29 @@ navbar menu
 */
 .navmenu-nav {
 margin-top: 9px;
+margin-bottom: 30px;
 }
 .dropdown{
   span {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    position: absolute;
-    right: 30px;
-    top: 4px;
+    position: relative;
     display: flex;
     align-items: center;
-    z-index: 999 !important;
+    z-index: 99 !important;
+    margin-top: -25px;
+    margin-bottom: 8px;
+    margin-left: 260px;
+    background-image: url(../images/code-spritesheet.png);
+    background-position: -127px -195px;
+  }
+}
+.dropdown.open {
+
+  span {
+    background-image: url(../images/code-spritesheet.png);
+    background-position: -125px -213px;
   }
 }
 .dropdown-menu {
@@ -299,10 +326,10 @@ margin-top: 9px;
       }
     }
   }
-  .nav.social-icons > li > a:hover, .nav.social-icons > li > a:focus {
+  .nav.social-icons > li > a:hover, .nav.social-icons > li > a:focus, .nav.countries > li > a:hover, .nav.countries > li > a:focus {
     background-color: transparent;
   }
-  .nav.social-icons > li > a {
+  .nav.social-icons > li > a, .nav.countries > li > a {
     padding: 0;
   }
 form {
@@ -320,8 +347,57 @@ form {
   width: 20%;
   min-width: inherit;
   border: none;
+  background-color: $color-white;
 }
 .form-group {
   display: flex;
 }
+.countries {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-bottom: 35px;
+  a {
+    color: $color-black;
+    font-size: 12px;
+  }
+  a:hover {
+    color: $color-primary;
+  }
+  li:nth-child(2) {
+    margin:0 20px;
+  }
+
+}
+}
+/*
+---------------------------------------------------------
+hamburger  menu animation
+---------------------------------------------------------
+*/
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	  top: 0px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  	top: 0px;
+}
+
+.navbar-toggle .icon-bar {
+	  position: relative;
+	  transition: all 500ms ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+	  top: 6px;
+	  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	   transform: translateY(37px);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  top: -7px;
+	  transform: rotate(-45deg);
 }
