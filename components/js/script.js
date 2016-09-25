@@ -74,7 +74,6 @@ var tween = new TimelineMax();
      TweenMax.to(".brand-container", 0.3, {height:50 }),
      TweenMax.to(".brand-image", 0.2, {width:100, height:35 }),
      TweenMax.to(".navmenu-brand", 0.3, {width:100, height:22 }),
-    TweenMax.to(".offcanvas.in", 0.3, {marginTop: 50 }),
 
 
 
@@ -88,11 +87,10 @@ var tween = new TimelineMax();
 })
 .setTween(tween)
 .addTo(scrollMagicController);
-/*
+/**/
 // button anim
 $(document).ready(function () {
 			  $(".navbar-toggle").on("click", function () {
 				    $(this).toggleClass("active");
 			  });
 		});
-*/
