@@ -401,3 +401,49 @@ hamburger  menu animation
 	  top: -7px;
 	  transform: rotate(-45deg);
 }
+/*-------------------------------------------
+breadcrumbs
+-------------------------------------------*/
+
+.breadcrumbs {
+  background-color: $color-primary;
+  margin-left: -40px;
+  margin-right: -40px;
+  .row  {
+    height: 20px;
+    padding: 0 40px
+  }
+  .nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    li > a {
+      color: $color-white;
+      font-size: 9px;
+      padding: 0;
+      font-family: $font-primary-book;
+    }
+    li > a.active {
+      color: $color-white;
+      font-family: $font-primary-bold;
+    }
+    li > a:hover, li > a:focus {
+    background-color: transparent;
+    color: $color-white;
+    text-decoration: underline;
+    }
+    li:nth-child(even) {
+      width: 20px;
+      height: 20px;
+      background: url(../images/code-spritesheet.png)-47px -180px;
+      }
+  }
+}
+
+.white-mask {
+  background-color: $color-white;
+  position: absolute;
+  top:0;
+  left:-40px;
+  height: inherit;
+}

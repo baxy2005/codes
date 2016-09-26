@@ -145,7 +145,7 @@ top main carousel hover
 		@include centerCenter;
 		flex-direction: column;
 		justify-content: center;
-		align-items: left;
+		align-items: flex-start;
 		text-align: left;
 		color: $color-white;
 	top: 0;
