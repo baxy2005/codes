@@ -66,4 +66,32 @@ footer {
         }
     }
   }
+  form {
+    margin-bottom: 20px;
+  }
+  .form-control {
+    border: none;
+    width: 80% !important;
+    box-shadow: none;
+    height: 40px;
+    font-size: 9px;
+    text-transform: uppercase;
+    box-shadow: transparent;
+    border: none;
+    font-family: $font-primary-italic;
+  }
+    .form-control:focus{
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: none;
+    }
+  .btn-default-search{
+    width: 20%;
+    min-width: inherit;
+    border: none;
+    background-color: $color-white;
+  }
+  .form-group {
+    display: flex !important;
+  }
 }

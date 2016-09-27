@@ -28,6 +28,18 @@ $('.owl-carousel-product .owl-dot').each(function(){
   i++;
 });
 
+$('.owl-carousel-product-one-product').owlCarousel({
+    animateOut: 'fadeOut',
+    loop:true,
+    margin:0,
+    nav:true,
+    items: 1,
+    navText: [
+      "<i class='carousel-left'></i>",
+      "<i class='carousel-right'></i>"
+   ],
+})
+
 $('.box').matchHeight();
 
 /*

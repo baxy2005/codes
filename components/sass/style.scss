@@ -47,6 +47,19 @@
 }
 
 @font-face {
+  font-family: 'Gotham-SSm-Light';
+  src: url('../fonts/GothamSSm-LightItalic.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamSSm-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GothamSSm-LightItalic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GothamSSm-LightItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GothamSSm-LightItalic.svg#7609061a39389cb896df92ba5f38138e') format('svg'); /* Legacy iOS */
+
+  font-style:   italic;
+  font-weight:  200;
+}
+
+
+@font-face {
   font-family: 'Didot';
   src: url('../fonts/ufonts.com_didot-bold.eot'); /* IE9 Compat Modes */
   src: url('../fonts/ufonts.com_didot-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -80,7 +93,7 @@ body{
 /*-------------------------------------------
 general
 -------------------------------------------*/
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   margin-top: 0px;
 }
@@ -149,6 +162,41 @@ a:hover, a:focus {
   background-color: $color-primary;
   border: 2px solid $color-primary;
 }
+.btn.btn-back {
+  @extend .btn.btn-scroll;
+  background-color: transparent;
+  background-position: 0px -104px;
+  position: absolute;
+  top: 60px;
+  z-index: 55;
+}
+
+.btn-text-hidden{
+  position: relative;
+  left: 20px;
+  display: block;
+  min-width: 0px;
+  width: 0px;
+  height: 35px;
+  line-height: 35px;
+  bottom: 8px;
+  background-color: $color-primary;
+  font-size: 13px;
+  text-transform: capitalize;
+  text-align: left;
+  overflow: hidden;
+  transition: all .2s ease-in;
+}
+.btn.btn-back:hover .btn-text-hidden {
+  width: 150px;
+  min-width: 150px;
+  color: $color-white;
+}
+.btn.btn-order {
+  background-color: $color-black;
+  color: $color-secondary;
+  border: $color-black;
+}
 
 .form-group {
     margin-bottom: 10px;
@@ -216,7 +264,7 @@ a:hover, a:focus {
       background-color: transparent;
     }
 
-    .project-gallery, .product, .services, .company, .magazine, .articles, .reach-out, .contact, .social-opening, .contact-page {
+    .project-gallery, .product, .services, .company, .magazine, .articles, .reach-out, .contact, .social-opening, .contact-page, footer, .one-product {
       .row	 {
     		margin-left: 0px;
     		margin-right: 0px;
@@ -609,8 +657,21 @@ contact page
 .contact-page {
   margin-top: 97px;
   margin-bottom: 167px;
+  .info-block {
+    margin: 40px 0 57px 77px;
+    p {
+      width: 80%;
+    }
+    p:last-child {
+margin-bottom: 0
+ }
+
+    h1 {
+      margin-bottom: 18px;
+    }
+  }
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
 
   label {
@@ -622,7 +683,7 @@ contact page
     height: 40px;
   }
   form {
-    padding: 25px;
+    padding: 14px 24px 24px 24px;
     background-color: $color-white;
   }
   .btn-default {
@@ -630,22 +691,55 @@ contact page
     bottom: 0;
     margin-bottom: -65px;
     right: 0px;
+    width: 50%;
+    background-color: $color-primary;
+    color: $color-white;
   }
   .textarea {
     height: 160px;
   }
+  .form-group:last-child {
+    margin-bottom: 15px;
+  }
   .form-inline {
     display: flex;
+    align-items: center;
     .form-group, .form-control {
       width: 40px;
       padding: 0;
       text-align: center;
+      margin-bottom: 0;
     }
-    .form-group:nth-of-type(3) {
+    .form-group:nth-of-type(4) {
     flex: 3;
     .form-control:nth-of-type(1){
       width: 100%;
+      text-align: left;
+      padding-left: 12px;
     }
   }
+  .form-group:nth-of-type(1) {
+    width: 17px;
+    text-align: left;
+  }
+  .form-group:nth-of-type(2),.form-group:nth-of-type(3) {
+  margin-right: 15px;
+  }
+
 }
+.padding-right{
+  padding-right: 0px;
+  @media (min-width: 768px) {
+    padding-right: 14px;
+    }
+
+}
+.padding-left{
+  padding-left: 0;
+  @media (min-width: 768px) {
+    padding-left: 14px;
+    }
+
+}
+
 }
