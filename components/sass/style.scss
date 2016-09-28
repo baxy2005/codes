@@ -81,6 +81,7 @@
 @import "main-carousel";
 @import "magazine";
 @import "products";
+@import "references";
 @import "kitchen";
 @import "footer";
 
@@ -137,6 +138,15 @@ a:hover, a:focus {
     background-color: $color-primary;
   }
 }
+.btn.btn-overlay-3 {
+  color: $color-secondary;
+  background-color: transparent;
+  border-color: $color-secondary;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
 
 .btn.btn-carousel {
   color: $color-white;
@@ -170,6 +180,15 @@ a:hover, a:focus {
   top: 60px;
   z-index: 55;
 }
+.btn.btn-back.btn-back-light {
+  border: 2px solid $color-secondary;
+  background-color: $color-secondary;
+  background-position: 0px -104px;
+  position: absolute;
+  top: 60px;
+  z-index: 55;
+  background-position: -91px -272px;
+}
 
 .btn-text-hidden{
   position: relative;
@@ -187,11 +206,24 @@ a:hover, a:focus {
   overflow: hidden;
   transition: all .2s ease-in;
 }
-.btn.btn-back:hover .btn-text-hidden {
-  width: 150px;
-  min-width: 150px;
-  color: $color-white;
+.btn.btn-back.btn-back-light .btn-text-hidden{
+  background-color: $color-secondary;
+  color: $color-black;
+
 }
+.btn.btn-back.btn-back-light.btn-light-close {
+    background-position: -118px -271px;
+}
+.btn.btn-back:hover .btn-text-hidden {
+  width: 170px;
+  min-width: 170px;
+  color: $color-white;
+
+}
+.btn.btn-back.btn-back-light:hover .btn-text-hidden {
+  color: $color-black;
+}
+
 .btn.btn-order {
   background-color: $color-black;
   color: $color-secondary;
@@ -231,9 +263,9 @@ a:hover, a:focus {
         color: $color-secondary;
         @include centerCenter;
         margin-right: 10px;
+        @include fadeIn;
         &:hover {
         background: $color-primary;
-        color: $color-primary;
         }
       }
     }
@@ -479,6 +511,7 @@ opening magazine
 }
 .overlay {
 @include centerCenter;
+flex-direction: column;
 }
 }
 
@@ -742,4 +775,61 @@ margin-bottom: 0
 
 }
 
+}
+.image-bg.image-bg-donwload {
+    background-image: url(../images/download/code-downloads-01.jpg);
+
+}
+
+/*-------------------------------------------
+alterier events
+-------------------------------------------*/
+
+.leading-story-alelier{
+  p {
+    font-family: $font-primary-book;
+    text-align: center;
+    margin: 0 25%;
+  }
+}
+.image-bg.image-bg-atelier-events{
+    background-image: url(../images/atelier/code-atelier-private-events-01.jpg);
+
+}
+/*-------------------------------------------
+region
+-------------------------------------------*/
+.region-switch-bg {
+  display: flex;
+  background-color: $color-secondary;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.region-container {
+  width: 50%;
+  height: inherit;
+}
+.region-left, .region-right {
+  width: 0;
+  transition: width .5s;
+  height: inherit;
+  background-color: $color-white;
+}
+
+.region-left {
+    left: 0;
+}
+.region-right {
+    left: 0;
+}
+.region-container:first-of-type div {
+  float: right;
+}
+.region-container:hover div, {
+    width:  100%;
+    background-color: $color-white;
 }

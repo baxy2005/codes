@@ -38,6 +38,21 @@ top main carousel
 			background-position: 2px -32px !important;
     }
 }
+/*-------------------------------------------
+one product carousel
+-------------------------------------------*/
+.owl-carousel-product-one-product.owl-theme .owl-controls {
+	.owl-nav [class*="owl-"]{
+		margin: 0 -115px;
+		background: transparent;
+	}
+	.owl-prev {
+		background-position: -88px -235px !important;
+			}
+	.owl-next {
+		background-position: -115px -235px  !important;
+	  }
+}
 
 /*-------------------------------------------
 product carousel

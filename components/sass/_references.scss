@@ -1,0 +1,22 @@
+/* Scss Document */
+.image-bg.image-bg-references {
+    background-image: url(../images/references/code-references-01.jpg);
+
+}
+.references {
+  .overlay {
+   h4 {
+     font-size: 16px;
+     color: $color-white;
+     font-family: $font-primary-medium;
+     margin-bottom: 30px;
+     padding: 0 45px;
+     line-height: 140%;
+   }
+  }
+}
+.references-selected {
+.hovereffect .overlay {
+    background-color:rgba($color-primary,0.7);
+  }
+}
