@@ -39,6 +39,17 @@ $('.owl-carousel-product-one-product').owlCarousel({
       "<i class='carousel-right'></i>"
    ],
 })
+$('#owl-carousel-product-list').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    items: 1,
+    navText: [
+      "<i class='carousel-left'></i>",
+      "<i class='carousel-right'></i>"
+   ],
+})
+
 
 $('.box').matchHeight();
 

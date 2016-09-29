@@ -30,3 +30,47 @@
 
 }
 }
+
+/*-------------------------------------------
+kitchen selected
+-------------------------------------------*/
+
+.kichen-selected {
+  .row:first-child {
+    margin-bottom: 75px;
+  }
+h1 {
+  margin-bottom: 43px;
+}
+.magazine-box {
+  p {
+    margin-bottom: 25px !important;
+  }
+}
+}
+.one-product-selected {
+  .hovereffect {
+    .col-xs-12:nth-of-type(1){
+      @include centerCenter;
+    }
+    .col-xs-12:nth-of-type(2){
+      height: 545px;
+      background-color: $color-secondary;
+      text-align: left;
+      padding: 25px;
+      h5 {
+        margin-top: 74px;
+      }
+      p {
+        font-size: 13px;
+        font-family: $font-primary;
+        line-height: 150%;
+      }
+      .btn-order {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+      }
+    }
+  }
+}

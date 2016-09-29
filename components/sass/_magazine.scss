@@ -92,7 +92,7 @@ articles
     .img-responsive {
       width: 100%;
   }
-  h3 {
+  .hovereffect h3 {
     position: absolute;
     z-index: 5;
     left: 20px;
@@ -155,8 +155,78 @@ articles
     bottom: -10px;
     top: auto;
   }
-  .btn-default {
+  .btn-load-more {
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+}
+/*-------------------------------------------
+magazine article
+-------------------------------------------*/
+.leading-magazine-story {
+  .social-icons-transparent {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    z-index: 55;
+    .fa {
+      opacity: .5;
+    }
+  }
+  .image-bg-magazine-story{
+    background-image: url(../images/magazine-page/magazine-article/code-magazine-magazine-article-01.jpg);
+  }
+  .container, .row, .col-xs-12 {
+    height: 100%;
+  }
+}
+
+.magazine-article-top {
+  h1 {
+    font-size: 38px;
+    text-align: left;
+    width: 66.6%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    line-height: 135%;
+  }
+  small {
+    color: $color-white;
+    font-family: georgia;
+    font-size: 13px;
+    font-style: italic;
+  }
+  .selectors-container {
+    margin-bottom: 40px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+.yellow-magazine-article-magazine {
+  .yellow-box-1  {
+    width: 76.2%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    }
+}
+.magazine-article {
+  margin-bottom: 100px;
+
+}
+.magazine-reach-out {
+  margin-top: 100px;
+  background-color: $color-secondary;
+}
+.magazine.magazine-article {
+  margin-bottom: 0px;
+}
+.magazine-reach-out {
+  .social-opening .social-icons .fa {
+    background: $color-white;
+    color: $color-secondary;
   }
 }

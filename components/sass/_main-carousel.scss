@@ -6,7 +6,7 @@ top main carousel
 	margin-top: 77px;
 }
 
-.top-carousel.owl-theme .owl-controls, .owl-carousel-product-one-product.owl-theme .owl-controls {
+.top-carousel.owl-theme .owl-controls, .owl-carousel-product-one-product.owl-theme .owl-controls, #owl-carousel-product-list.owl-theme .owl-controls {
   top: 50%;
   margin: 0;
   .owl-dots{
@@ -41,7 +41,7 @@ top main carousel
 /*-------------------------------------------
 one product carousel
 -------------------------------------------*/
-.owl-carousel-product-one-product.owl-theme .owl-controls {
+.owl-carousel-product-one-product.owl-theme .owl-controls, #owl-carousel-product-list.owl-theme .owl-controls {
 	.owl-nav [class*="owl-"]{
 		margin: 0 -115px;
 		background: transparent;
