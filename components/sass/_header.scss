@@ -403,6 +403,9 @@ hamburger  menu animation
 	  top: -7px;
 	  transform: rotate(-45deg);
 }
+.navbar-toggle.active .icon-bar.icon-bar-2 {
+   transform: translateY(24px);
+}
 /*-------------------------------------------
 breadcrumbs
 -------------------------------------------*/

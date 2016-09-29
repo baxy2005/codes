@@ -99,6 +99,13 @@ var tween = new TimelineMax();
 })
 .setTween(tween)
 .addTo(scrollMagicController);
+
+var scene3 = new ScrollScene({
+  offset: 50
+
+})
+.setClassToggle('.icon-bar:nth-of-type(2)', 'icon-bar-2')
+.addTo(scrollMagicController);
 /**/
 // button anim
 $(document).ready(function () {
