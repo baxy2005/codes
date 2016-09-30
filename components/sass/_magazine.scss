@@ -6,6 +6,7 @@ leading story
 .leading-story {
   height: 600px;
   padding: 0;
+  z-index: 6;
   .container {
     position: absolute;
     z-index: 5;
@@ -164,6 +165,7 @@ articles
 magazine article
 -------------------------------------------*/
 .leading-magazine-story {
+  margin-bottom: 96px;
   .social-icons-transparent {
     position: absolute;
     bottom: 20px;
@@ -220,13 +222,122 @@ magazine article
 .magazine-reach-out {
   margin-top: 100px;
   background-color: $color-secondary;
+  .social-opening .social-icons .fa {
+    background: $color-white;
+    color: $color-secondary;
+  }
+.form-control {
+    background-color: $color-secondary !important;
+  }
 }
 .magazine.magazine-article {
   margin-bottom: 0px;
 }
-.magazine-reach-out {
-  .social-opening .social-icons .fa {
-    background: $color-white;
-    color: $color-secondary;
+.magazine-article-text {
+  .img-responsive {
+    width: 100%;
+  }
+  .caption {
+    background-color: $color-secondary;
+    padding-top: 0px;
+    p {
+      font-size: 13px;
+      font-family: georgia;
+      font-style: italic;
+      line-height: 120%;
+      width: 80%;
+      padding: 15px 0 0 15px;
+    }
+  }
+  p {
+    margin-bottom: 75px;
+  }
+  h4 {
+    margin-top: 0px;
+  }
+  .side-text {
+    background-color: $color-secondary;
+    padding: 20px !important;
+    margin-top: -10px;
+    h5 {
+      font-size: 13px;
+      font-family: $font-primary-bold;
+      margin-bottom: 15px;
+    }
+    p{
+      font-size: 13px;
+      line-height: 20px;
+    }
+    p:last-child {
+      margin-bottom:0px;
+    }
+  }
+}
+.yellow-box-magazine-article {
+  .yellow-box.yellow-box-1 {
+    width: 30%;
+    height: 100%;
+    top: -10px;
+    right: 0px;
+  }
+  .yellow-box-2 {
+    width: 20%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+}
+.yellow-box-4 {
+    height: 100%;
+    left: 0;
+    width: 50%;
+  }
+}
+.magazine-article-picture, .magazine-article-picture-left, .atelier-article-picture {
+  height: 600px;
+  background-color: $color-secondary;
+  background-image: url(../images/magazine-page/magazine-article/code-magazine-magazine-article-03.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: 100px;
+  margin-bottom: 95px;
+  .caption {
+    padding: 0 !important;
+    padding-top: 20px;
+    background-color: transparent;
+    p {
+      font-size: 13px;
+      font-family: georgia;
+      font-style: italic;
+      line-height: 120%;
+      width: 80%;
+    }
+  }
+}
+.atelier-article-picture {
+background-image: url(../images/atelier/social/code-atelier-atelier-social-03.jpg);
+
+}
+.magazine-article-picture-left {
+  background-position: left;
+  background-image: url(../images/magazine-page/magazine-article/code-magazine-magazine-article-04.jpg);
+  p {
+    width: 100%;
+    padding-left: 25px;
+  }
+}
+.margin-bottom-article {
+  margin-bottom: 95px;
+}
+.widget-story {
+  p {
+    margin-bottom: 10px;
+    font-size: 13px !important;
+    text-transform: uppercase;
+  }
+  .social-icons .fa {
+    background-color: $color-primary;
+    color: $color-white;
+    width: 40px;
+    height: 40px;
   }
 }

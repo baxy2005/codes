@@ -106,6 +106,9 @@ a:hover, a:focus {
 	color: $color-black;
   text-decoration: none;
 }
+.margin-bottom-big {
+margin-bottom: 100px;
+}
 
 .btn {
 	font-family: $font-primary-book;
@@ -157,6 +160,10 @@ a:hover, a:focus {
 .btn.btn-more-info {
   color: $color-black;
   border: 2px solid $color-black;
+  &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
 }
 .btn.btn-carousel {
   color: $color-white;
@@ -188,6 +195,14 @@ a:hover, a:focus {
   background-position: 0px -104px;
   position: absolute;
   top: 60px;
+  z-index: 55;
+}
+.btn.btn-gallery {
+  @extend .btn.btn-scroll;
+  background-position: -50px -204px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
   z-index: 55;
 }
 .btn.btn-back.btn-back-light {
@@ -239,6 +254,7 @@ a:hover, a:focus {
   color: $color-secondary;
   border: $color-black;
 }
+
 
 .form-group {
     margin-bottom: 10px;
@@ -306,7 +322,7 @@ a:hover, a:focus {
       background-color: transparent;
     }
 
-    .project-gallery, .product, .services, .company, .magazine, .articles, .reach-out, .contact, .social-opening, .contact-page, footer, .one-product {
+    .project-gallery, .product, .services, .company, .magazine, .articles, .reach-out, .contact, .social-opening, .contact-page, footer, .one-product, .blog, .magazine-article-text {
       .row	 {
     		margin-left: 0px;
     		margin-right: 0px;
@@ -887,13 +903,22 @@ region
   z-index: 6;
   top: 50%;
   left: 50%;
-  margin-left: -431px;
+  margin-left: -50%;
   margin-top: -40px;
-  width: 862px;
+  width: 100%;
   display: flex;
+
   .button-default {
     flex-shrink: 1;
-
+  }
+  .region-item {
+    text-align:center;
+    flex: 1;
+  }
+  .region-item:nth-of-type(2) {
+    width: 171px;
+    position: absolute;
+    margin-left: -85.5px;
   }
   a {
     flex-shrink: 2;
