@@ -5,6 +5,7 @@ $('.owl-carousel').owlCarousel({
     margin:0,
     nav:true,
     items: 1,
+    autoplay: true,
     navText: [
       "<i class='main-carusel-left'></i>",
       "<i class='main-carusel-right'></i>"
@@ -24,6 +25,22 @@ $('.owl-carousel-product').owlCarousel({
 })
 var i = 1;
 $('.owl-carousel-product .owl-dot').each(function(){
+  $(this).text(i);
+  i++;
+});
+$('.owl-carousel-services').owlCarousel({
+    animateOut: 'fadeOut',
+    loop:true,
+    margin:0,
+    nav:true,
+    items: 1,
+    navText: [
+      "<i class='carousel-left'></i>",
+      "<i class='carousel-right'></i>"
+   ],
+})
+var i = 1;
+$('.owl-carousel-services .owl-dot').each(function(){
   $(this).text(i);
   i++;
 });
@@ -124,3 +141,39 @@ $(document).ready(function () {
 				    $(this).toggleClass("active");
 			  });
 		});
+
+$(".top-carousel-container .owl-prev, .top-carousel-container .owl-next, .top-carousel-container .btn-scroll, .top-carousel-container .hovereffect-2").hover(function(){
+       $(".hover-content").addClass('hover-content-slide');
+       console.log("div was hovered");
+    }, function(){
+       $(".hover-content").removeClass('hover-content-slide');
+    });
+
+// region classes
+$(".mask-1").hover(function(){
+       $(".region-left").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-left").removeClass('region-open');
+    });
+
+$(".region-item:first-child .btn-default").hover(function(){
+       $(".region-left").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-left").removeClass('region-open');
+    });
+
+$(".mask-2").hover(function(){
+       $(".region-right").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-right").removeClass('region-open');
+    });
+
+$(".region-item:last-child .btn-default").hover(function(){
+       $(".region-right").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-right").removeClass('region-open');
+    });

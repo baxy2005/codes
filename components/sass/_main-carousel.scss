@@ -57,7 +57,7 @@ one product carousel
 /*-------------------------------------------
 product carousel
 -------------------------------------------*/
-.owl-carousel-product.owl-theme .owl-controls {
+.owl-carousel-product.owl-theme .owl-controls, .owl-carousel-services.owl-theme .owl-controls {
   position: absolute;
   top: -130px;
   margin: 0;
@@ -196,7 +196,7 @@ top main carousel hover
 	transition: transform 0.35s;
 }
 
-.hovereffect-2:hover .hover-content {
+.hovereffect-2:hover .hover-content, .hover-content-slide {
 -webkit-transform: translate3d(-37.5%,0,0);
 	transform: translate3d(-37.5%,0,0);
 }
