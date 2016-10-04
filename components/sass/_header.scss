@@ -234,6 +234,10 @@ navbar menu
 margin-top: 9px;
 margin-bottom: 30px;
 }
+.nav.navmenu-nav li a {
+  display: inline-block;
+  width: 100%;
+}
 .dropdown{
   span {
     width: 20px;
