@@ -149,10 +149,19 @@ navbar styles
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: transparent;
 }
-
+.not-front {
+  .offcanvas.in  {
+    // padding-top: 97px;
+  }
+}
 
 .offcanvas.in {
-  padding-top: 77px;
+  // padding-top: 77px;
+  display: block;
+  position: relative;
+  margin-left: -40px;
+  padding-bottom: 40px;
+  min-height: 600px;
 }
 
 .navmenu, .navbar-offcanvas {
