@@ -6,7 +6,7 @@ top main carousel
 	margin-top: 77px;
 }
 
-.top-carousel.owl-theme .owl-controls, .owl-carousel-product-one-product.owl-theme .owl-controls, #owl-carousel-product-list.owl-theme .owl-controls {
+.top-carousel, .owl-carousel-product-one-product, #owl-carousel-product-list {
   top: 50%;
   margin: 0;
   .owl-dots{
@@ -20,6 +20,9 @@ top main carousel
       padding: 0;
       margin: 0;
       font-size: 24px;
+			&:hover {
+				background: $color-primary;
+			}
     }
     .owl-prev, .owl-next{
     }
@@ -27,24 +30,27 @@ top main carousel
 			position: absolute;
 			top: calc(50% - 17px);
 			left: 40px;
-			background-image: url(../images/code-spritesheet.png)!important;
+			background-image: url(../images/code-spritesheet.svg)!important;
 			background-position: 2px -103px !important;
 		    }
     .owl-next {
 			position: absolute;
 			top: calc(50% - 17px);
 			right: 40px;
-			background-image: url(../images/code-spritesheet.png)!important;
+			background-image: url(../images/code-spritesheet.svg)!important;
 			background-position: 2px -32px !important;
     }
 }
 /*-------------------------------------------
 one product carousel
 -------------------------------------------*/
-.owl-carousel-product-one-product.owl-theme .owl-controls, #owl-carousel-product-list.owl-theme .owl-controls {
+.owl-carousel-product-one-product, #owl-carousel-product-list {
 	.owl-nav [class*="owl-"]{
 		margin: 0 -115px;
 		background: transparent;
+		&:hover {
+			background: transparent;
+		}
 	}
 	.owl-prev {
 		background-position: -88px -235px !important;
@@ -57,14 +63,37 @@ one product carousel
 /*-------------------------------------------
 product carousel
 -------------------------------------------*/
-.owl-carousel-product.owl-theme .owl-controls, .owl-carousel-services.owl-theme .owl-controls {
-  position: absolute;
-  top: -130px;
-  margin: 0;
-  width: 43%;
+.owl-carousel-product, .owl-carousel-services {
+	.owl-nav {
+		position: absolute;
+		top: -130px;
+		margin: 0;
+		width: 43%;
+	}
+	.owl-nav [class*="owl-"]{
+		border-radius: 0;
+		padding: 0;
+		margin: 0;
+		height: 56px;
+		width: 30px;
+		background-color: transparent;
+		&:hover {
+			background-color: transparent;
+		}
+	}
   .owl-dots{
-    margin-top: 17px;
 		line-height: 1.6;
+		position: absolute;
+		top: -130px;
+		margin: 0;
+		width: 37.5%;
+		text-align: center;
+		z-index: 5;
+		margin-top: 17px;
+		margin-left: 30px;
+		margin-right: 30px;
+
+
     .owl-dot.active {
       background-color: $color-primary;
       margin: 0 11px;
@@ -78,37 +107,29 @@ product carousel
       margin: 0 11px;
       font-size: 13px;
 			width: 20px;
+			display: inline-block;
     }
   }
-    .owl-nav [class*="owl-"]{
-      border-radius: 0;
-      padding: 0;
-      margin: 0;
-      width: 30px;
-      height: 56px;
-      background-color: transparent;
-    }
-    .owl-nav [class*="owl-"]:hover {
-      background-color: transparent;
-    }
     .owl-prev, .owl-next{
       background-repeat: no-repeat;
       background-size: 158px 306px;
     }
     .owl-prev {
       float: left;
-      background-image: url(../images/code-spritesheet.png);
+      background-image: url(../images/code-spritesheet.svg);
       background-position: -48px -8px;
     }
     .owl-next {
       float: right;
-      background-image: url(../images/code-spritesheet.png);
+      background-image: url(../images/code-spritesheet.svg);
       background-position: -100px -8px;
     }
 }
 .services {
-  .owl-carousel-product.owl-theme .owl-controls {
+  .owl-carousel-product{
+		.owl-nav, .owl-dots {
     right: 0;
+		}
   }
 }
 /*-------------------------------------------

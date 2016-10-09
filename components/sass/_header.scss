@@ -51,10 +51,13 @@ position:absolute;
 overflow:hidden;
 top:0;
 left:0;
-opacity:0;
+opacity:1;
 background-color:rgba(0,0,0,0.6);
 -webkit-transition:all .4s ease-in-out;
-transition:all .4s ease-in-out
+transition:all .4s ease-in-out;
+@media (min-width: 768px) {
+  opacity:0;
+  }
 }
 
 .hovereffect img {
@@ -65,7 +68,7 @@ transition:all .4s linear;
 }
 
 .hovereffect h2 {
-opacity:0;
+opacity:1;
 text-transform:uppercase;
 color:#fff;
 text-align:center;
@@ -79,6 +82,10 @@ margin-top: 40px;
 font-family: $font-primary-medium;
 line-height: 150%;
 margin-bottom: 0px;
+@media (min-width: 768px) {
+  opacity:0;
+  }
+
 }
 
 .hovereffect a.info {
@@ -87,7 +94,7 @@ display:inline-block;
 color:#fff;
 border:none;
 background-color:transparent;
-opacity:0;
+opacity:1;
 filter:alpha(opacity=0);
 -webkit-transition:all .2s ease-in-out;
 transition:all .2s ease-in-out;
@@ -97,6 +104,10 @@ font-family: Georgia;
 font-size: 13px;
 font-weight: normal;
 font-style: italic;
+@media (min-width: 768px) {
+  opacity:0;
+  }
+
 }
 
 .hovereffect a.info:hover {
@@ -181,7 +192,11 @@ navbar styles
 .navbar-default {
   background-color: $color-white;
   border: none;
-  padding: 0 40px;
+  padding: 0 20px;
+  @media (min-width: 768px) {
+    padding: 0 40px;
+    }
+
 }
 
 .brand-container {
@@ -453,7 +468,7 @@ breadcrumbs
     li:nth-child(even) {
       width: 20px;
       height: 20px;
-      background: url(../images/code-spritesheet.png)-47px -180px;
+      background: url(../images/code-spritesheet.svg)-47px -180px;
       }
   }
 }

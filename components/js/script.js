@@ -1,5 +1,5 @@
 // JavaScript Document
-$('.owl-carousel').owlCarousel({
+$('.owl-carousel-main').owlCarousel({
     animateOut: 'fadeOut',
     loop:true,
     margin:0,
@@ -108,6 +108,7 @@ scrollMagicController = new ScrollMagic({
 var tween = new TimelineMax();
 
      tween.add([
+      TweenMax.to(".on-off", 0.2, {marginTop:70 }),
      TweenMax.to(".button-language-container", 0.3, {height:50}),
      TweenMax.to(".button-language-container", 0.3, {marginTop: -50}),
      TweenMax.to(".navbar", 0.3, {height:50}),
