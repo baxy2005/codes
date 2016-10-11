@@ -411,11 +411,15 @@ opening project gallery
 
 .project-gallery, .product, .services, .company, .magazine, {
 	h1 {
-		text-transform: uppercase;
 		margin-bottom: 20px;
 	}
 	p {
 		font-size: 13px;
+    margin-bottom: 25px;
+    @media (min-width: 768px) {
+      margin-bottom: 0px;
+      }
+
 	}
 	/*.row:first-child {
 		display: flex;
@@ -437,16 +441,25 @@ opening project gallery
     width: 100%;
   }
   .col-xs-12:first-child, .col-xs-12:last-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centerCenter;
   }
     .col-xs-12:first-child {
       justify-content: flex-start;
     }
 }
 .project-gallery {
-  margin-top: 100px;
+  margin-top: 45px;
+  @media (min-width: 768px) {
+    margin-top: 100px;
+    }
+}
+.project-gallery, .company {
+  .btn-default {
+    margin-top: 30px;
+    @media (min-width: 768px) {
+      margin-top: 0px;
+      }
+  }
 }
 /*-------------------------------------------
 opening product gallery
@@ -454,7 +467,10 @@ opening product gallery
  .product, .services {
 	 .row:first-child {
 		 .col-xs-12 {
-			 height: 210px;
+       height: auto;
+       @media (min-width: 768px) {
+         height: 210px;
+         }
 		 }
 	 }
 	 .row:last-child {
@@ -465,7 +481,10 @@ opening product gallery
 	 }
  }
  .product, .services {
-   margin-top: 30px;
+   margin-top: 45px;
+   @media (min-width: 768px) {
+     margin-top: 30px;
+     }
  }
 
  /*-------------------------------------------
@@ -475,7 +494,10 @@ opening product gallery
  .services {
    .overlay {
      p {
+       width: 85%;
+       @media (min-width: 768px) {
        width: 40%;
+       }
      }
    }
  }
@@ -484,8 +506,11 @@ opening product gallery
  -------------------------------------------*/
 
 .company {
-  margin-top: 100px;
-  margin-bottom: 60px;
+  margin-top: 45px;
+  @media (min-width: 768px) {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    }
   h3 {
     text-align: center;
     margin-top: 10px;
@@ -498,7 +523,7 @@ opening product gallery
   .col-xs-12:last-child {
     margin-top: -40px;
   }
-  .col-xs-12:nth-child(2) {
+  .col-xs-12:nth-child(1) {
     @include centerCenter;
   }
   .img-responsive {
@@ -540,7 +565,10 @@ opening magazine
   background-color: $color-white;
   padding: 20px;
   clear: both;
-  height: 200px;
+  height: auto;
+  @media (min-width: 768px) {
+    height: 200px;
+  }
   @media (min-width: 1280px) {
     height: 237.5px;
     }
@@ -562,9 +590,16 @@ flex-direction: column;
 }
 
 .magazine {
+  margin-top: 45px;
+  @media (min-width: 768px) {
+  margin-top: 0;
   margin-bottom: 100px;
+  }
   .col-xs-12:nth-child(1) p {
+    width: 100%;
+    @media (min-width: 768px) {
     width: 55%;
+    }
   }
   .hovereffect {
     height: auto;
@@ -602,7 +637,10 @@ flex-direction: column;
       }
   }
   .col-xs-12:nth-child(5), .col-xs-12:nth-child(1)  {
-    height: 200px;
+    height: auto;
+    @media (min-width: 768px) {
+      height: 200px;
+    }
     @media (min-width: 1280px) {
       height: 237.5px;
       }
@@ -612,13 +650,23 @@ flex-direction: column;
 opening reach out
 -------------------------------------------*/
 .reach-out {
-  margin-top: 0px;
+  margin-top: 45px;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  }
   h1 {
     margin-bottom: 20px;
     margin-top: 0px;
   }
   img {
     width: 100%;
+  }
+  p {
+    font-size: 13px;
+    margin-bottom: 25px;
+    @media (min-width: 768px) {
+      margin-bottom: 0px;
+      }
   }
 
   .caption {
@@ -632,14 +680,20 @@ opening reach out
       @include centerCenter;
   }
   .col-xs-12:nth-child(1)  {
-    height: 200px;
-    @include centerCenter;
+    height: auto;
+    @media (min-width: 768px) {
+      height: 200px;
+      @include centerCenter;
+    }
     @media (min-width: 1280px) {
       height: 237.5px;
       }
   }
   .col-xs-12:nth-child(2) {
+    margin-top: 0px;
+    @media (min-width: 768px) {
       margin-top: -200px;
+    }
   @media (min-width: 1280px) {
     margin-top: -237.5px;
     }
@@ -650,8 +704,13 @@ opening reach out
 opening contact
 -------------------------------------------*/
 .contact {
-  margin-top: 100px;
+  margin-top: 30px;
   text-transform: uppercase;
+  margin-bottom: 50px;
+  @media (min-width: 768px) {
+  margin-top: 100px;
+  margin-bottom: 0px;
+  }
   h3 {
     text-transform: uppercase;
     margin: 0;

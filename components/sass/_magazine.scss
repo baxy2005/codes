@@ -4,7 +4,10 @@
 leading story
 -------------------------------------------*/
 .leading-story {
-  height: 600px;
+  height: 395px;
+  @media (min-width: 768px) {
+    height: 600px;
+    }
   padding: 0;
   z-index: 6;
   .container {
@@ -75,6 +78,72 @@ articles
 -------------------------------------------*/
 
 .articles, .services {
+  position: relative;
+  .leading-container {
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+     }
+  }
+  .leading-container:before  {
+    @include triangleUp;
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+  }
+  .leading-story-article {
+    position: relative;
+    padding-top: 15px;
+    .social-icons.social-icons-transparent {
+      display: none;
+    }
+    p, h3 {
+      text-align: left;
+    }
+    @media (min-width: 768px) {
+      padding-top: 0px;
+      position: absolute;
+      top: -285px;
+      z-index: 55;
+      h3, p {
+        color: $color-white;
+        text-align: left;
+      }
+      h3 {
+        font-family: $font-primary-book;
+        margin-bottom: 15px;
+        margin-top: 0px;
+      }
+      p {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .btn-default {
+        color: $color-white;
+      }
+      .selectors-container {
+        height: 18px;
+        margin-bottom: 185px;
+      }
+      .box:nth-of-type(2) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      .social-icons.social-icons-transparent {
+        position: relative ;
+        right: 0;
+        bottom: 0;
+        display: inherit;
+      }
+    }
+    @media (min-width: 980px) {
+      position: absolute;
+      top: -235px;
+      z-index: 55;
+    }
+  }
   .week {
     width: 90px;
     height: 28px;
@@ -84,7 +153,12 @@ articles
   	font-size: 16px;
   	font-style: italic;
     @include centerCenter;
+    margin-bottom: 35px;
+    margin-top: 25px;
+    @media (min-width: 768px) {
+    margin-top: 0px;
     margin-bottom: 65px;
+    }
   }
   h1 {
     margin-bottom: 20px;
@@ -101,7 +175,15 @@ articles
     color: $color-white;
   }
   p {
+    margin-bottom: 17px;
+    text-align: left;
+    @media (min-width: 768px) {
     margin-bottom: 45px;
+    text-align: center;
+    }
+  }
+  .magazine-box p {
+    text-align: left;
   }
   .overlay {
     p {
@@ -157,10 +239,107 @@ articles
     top: auto;
   }
   .btn-load-more {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    @media (min-width: 768px) {
     margin-top: 100px;
     margin-bottom: 100px;
+    }
   }
 }
+
+.articles .hovereffect-mobile {
+  .social-icons-transparent {
+    display: none;
+  }
+  @media (min-width: 768px) {
+  .social-icons-transparent {
+    display: flex;
+  }
+}
+}
+.articles .hovereffect-mobile .image-container {
+position: relative;
+}
+
+.articles .hovereffect-mobile .image-container:before  {
+  @include triangleUp;
+  bottom: -10px;
+  top: auto;
+  @media (min-width: 768px) {
+    display: none;
+   }
+}
+.articles .hovereffect-mobile .overlay {
+  position: relative;
+  background-color: $color-white;
+  h3, p {
+    color: $color-black;
+  }
+  h3 {
+    font-family: $font-primary-book;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+  p {
+    margin-top: 60px;
+    width: 100%;
+    text-align: left;
+    margin-left: 0px;
+    margin-bottom: 35px;
+    font-size: 13px;
+  }
+  .info {
+    text-align: left;
+    display: block;
+    margin-left: 0px;
+  }
+  .btn-default {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .info {
+    @extend .btn;
+    @extend .btn-default;
+    font-style: normal;
+    padding: 6px 12px;
+    text-align: center;
+    width: 217px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+  position: absolute;
+  background-color:rgba(0,0,0,0.6);
+  h3, p {
+    color: $color-white;
+  }
+  p {
+    width: 40%;
+    margin-left: 20px;
+    margin-bottom: 15px
+  }
+  .info {
+    margin-left: 20px !important;
+    padding: 0 !important;
+    display: inline !important;
+    float: left !important;
+    font-style: normal !important;
+    font-family: Georgia,sans-serif !important;
+    font-size: 13px !important;
+    font-style: italic !important;
+    border: none !important;
+    color: $color-white !important;
+    text-transform: capitalize !important;
+    text-align: left !important;
+    width: auto !important;
+    height: auto !important;
+    &:hover {
+      background-color: transparent !important;
+    }
+}
+}
+}
+
 /*-------------------------------------------
 magazine article
 -------------------------------------------*/

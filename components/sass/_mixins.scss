@@ -25,3 +25,16 @@ align-items: center;
 	margin-right: auto;
 
 }
+@mixin triangleUp {
+content: '';
+position: absolute;
+top: -10px;
+width: 20px;
+height: 20px;
+margin: auto;
+background: $color-white;
+-moz-transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+margin-left: -10px;
+z-index: 15;
+}

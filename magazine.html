@@ -96,39 +96,48 @@
 </header><!--header-->
 <main>
 <div class="container-fluid leading-story on-off">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <h1><span>CODE</span>SIGN<span> MAGAZINE</span></h1>
-          <div class="selectors-container">
-            <ul class="nav selectors">
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" checked value="all" id="references-filter-1">
-                  <label for="references-filter-1" class="btn-selector btn-selector-close"><span>All subjects</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="houses" id="references-filter-2">
-                  <label for="references-filter-2" class="btn-selector btn-selector-close"><span>events</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-3">
-                  <label for="references-filter-3" class="btn-selector btn-selector-close"><span>lifestyle</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="images" id="references-filter-4">
-                  <label for="references-filter-4" class="btn-selector btn-selector-close"><span>images</span></label>
-                </div><!--selectors-container-->
-              </li>
-            </ul>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h1><span>CODE</span>SIGN<span> MAGAZINE</span></h1>
+        <div class="selectors-container">
+          <ul class="nav selectors">
+            <li>
+              <div class="selector-container">
+                <input type="checkbox" name="filter-reference" checked value="all" id="references-filter-1">
+                <label for="references-filter-1" class="btn-selector btn-selector-close"><span>All subjects</span></label>
+              </div><!--selectors-container-->
+            </li>
+            <li>
+              <div class="selector-container">
+                <input type="checkbox" name="filter-reference" value="houses" id="references-filter-2">
+                <label for="references-filter-2" class="btn-selector btn-selector-close"><span>events</span></label>
+              </div><!--selectors-container-->
+            </li>
+            <li>
+              <div class="selector-container">
+                <input type="checkbox" name="filter-reference" value="flats" id="references-filter-3">
+                <label for="references-filter-3" class="btn-selector btn-selector-close"><span>lifestyle</span></label>
+              </div><!--selectors-container-->
+            </li>
+            <li>
+              <div class="selector-container">
+                <input type="checkbox" name="filter-reference" value="images" id="references-filter-4">
+                <label for="references-filter-4" class="btn-selector btn-selector-close"><span>images</span></label>
+              </div><!--selectors-container-->
+            </li>
+          </ul>
         </div>
+      </div>
+    </div><!--row-->
+  </div>
+  <div class="image-bg">
+  </div>
+</div><!-- leading-story container fluid-->
+<div class="container articles">
+  <div class="row">
+    <div class="leading-container">
+      <div class="leading-story-article padding-mobile">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box">
           <h3>Lorem ipsum dolor sitamet<br>consectetur kolorka</h3>
           <p>Craselit a metus, semperet urnaetot es, tempus placeratex. Suspendisse potentia a liquam. Craselit a metus, semperet urn aetot es, tempus placeratex. Suspendisse potentia a liquam.</p>
@@ -143,22 +152,16 @@
             <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
           </ul>
         </div>
-      </div><!--row-->
+      </div>
     </div>
-    <div class="image-bg">
-    </div>
-</div><!-- leading-story container fluid-->
-<div class="container articles">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center padding-mobile">
       <div class="week">week #48</div>
       <h1>Best ISSUE EVER</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod nulla a sapien fermentum rutrum eget luctus mauris.
 Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consectetur. Nunc fringilla vestibulum elit et pulvinar.</p>
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="hovereffect">
-        <h3>BEST HOME EVER</h3>
+      <div class="hovereffect hovereffect-mobile">
         <ul class="nav social-icons social-icons-transparent">
           <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
@@ -166,8 +169,11 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
           <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
         </ul>
-        <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-01.jpg" alt="">
-        <div class="overlay overlay-left-align">
+        <div class="image-container">
+          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-01.jpg" alt="">
+        </div>
+        <div class="overlay overlay-left-align padding-mobile">
+          <h3>BEST HOME EVER</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
           <a class="info" href="#">Read More</a>
         </div>
@@ -186,8 +192,7 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
       </div>
     </div><!--small article -->
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-      <div class="hovereffect">
-        <h3>BEST HOME EVER</h3>
+      <div class="hovereffect hovereffect-mobile">
         <ul class="nav social-icons social-icons-transparent">
           <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
@@ -195,16 +200,18 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
           <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
         </ul>
-        <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-03.jpg" alt="">
-        <div class="overlay overlay-left-align">
+        <div class="image-container">
+          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-03.jpg" alt="">
+        </div>
+        <div class="overlay overlay-left-align padding-mobile">
+          <h3>BEST HOME EVER</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
           <a class="info" href="#">Read More</a>
         </div>
       </div>
     </div><!-- smaller article-->
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-      <div class="hovereffect">
-        <h3>BEST HOME EVER</h3>
+      <div class="hovereffect hovereffect-mobile">
         <ul class="nav social-icons social-icons-transparent">
           <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
@@ -212,8 +219,11 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
           <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
         </ul>
-        <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-04.jpg" alt="">
-        <div class="overlay overlay-left-align">
+        <div class="image-container">
+          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-04.jpg" alt="">
+        </div>
+        <div class="overlay overlay-left-align padding-mobile">
+          <h3>BEST HOME EVER</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
           <a class="info" href="#">Read More</a>
         </div>
@@ -268,8 +278,7 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
       </div><!-- magazine thumbnail-->
     </div><!--small article-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="hovereffect">
-        <h3>BEST HOME EVER</h3>
+      <div class="hovereffect hovereffect-mobile">
         <ul class="nav social-icons social-icons-transparent">
           <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
@@ -277,8 +286,11 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
           <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
           <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
         </ul>
-        <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-09.jpg" alt="">
-        <div class="overlay overlay-left-align">
+        <div class="image-container">
+          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-09.jpg" alt="">
+        </div>
+        <div class="overlay overlay-left-align padding-mobile">
+          <h3>BEST HOME EVER</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
           <a class="info" href="#">Read More</a>
         </div>
@@ -292,7 +304,7 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
 <div class="container-fluid">
   <div class="container reach-out">
     <div class="row">
-      <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-6 col-xs-12">
+      <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-6 col-xs-12 padding-mobile">
         <div class="info-block">
           <h1>REACH OUT</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proineuismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
@@ -308,7 +320,7 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
       </div><!--one box -->
     </div><!--row-->
   </div><!--reach-out -->
-  <div class="container contact">
+  <div class="container contact padding-mobile">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
         <h3>CONTACTS</h3>
@@ -334,7 +346,7 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
       </div>
     </div>
   </div><!-- contact -->
-  <div class="container social-opening">
+  <div class="container social-opening hidden-xs hidden-sm">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
       <ul class="nav social-icons">
@@ -352,7 +364,7 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <a href=""><img src="images/code-logo-gray.png" width="100" height="21.5" alt=""></a>
+        <a href=""><img src="images/code-logo-footer.svg" width="100" height="21.5" alt=""></a>
       </div><!--brand-->
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-xs">
         <ul class="nav">
