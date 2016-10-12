@@ -3,6 +3,17 @@
 /*-------------------------------------------
 leading story
 -------------------------------------------*/
+.leading-story::before {
+  @include triangleUp;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: auto;
+  bottom:-10px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 .leading-story {
   height: 395px;
   @media (min-width: 768px) {
@@ -10,12 +21,51 @@ leading story
     }
   padding: 0;
   z-index: 6;
+  .row:first-child {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @media (min-width: 768px) {
+      height: auto;
+      }
+
+    .col-xs-12:nth-of-type(1) {
+      order: 1;
+      z-index: 16;
+      @media (min-width: 768px) {
+        order: 2;
+        }
+    }
+    .col-xs-12:nth-of-type(2){
+      order: 2;
+      height: 100%;
+      @media (min-width: 768px) {
+        order: 1;
+        height: auto;
+        }
+        .btn-default {
+          position: absolute;
+          bottom: 70px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+        .btn-default.btn-back {
+          right: auto;
+        }
+    }
+  }
   .container {
     position: absolute;
-    z-index: 5;
+    z-index: 55;
     margin: 0px auto;
     left: 0px;
     right: 0px;
+    height: 100%;
+    @media (min-width: 768px) {
+      height: auto;
+      }
+
   }
   .image-bg{
     background-image: url(../images/magazine-page/code-magazine-page-main-bg.jpg);
@@ -60,8 +110,88 @@ leading story
     color: $color-white;
   }
   .selectors-container {
-    height: 18px;
-    margin-bottom: 185px;
+    @include centerCenter;
+    flex-wrap: wrap;
+    background-color: $color-secondary;
+    padding: 20px;
+    height: 405px;
+    @media (min-width: 768px) {
+      height: 18px;
+      margin-bottom: 185px;
+      background-color: transparent;
+      padding: 0;
+      height: auto;
+     }
+     .selectors {
+       @include centerCenter;
+       flex-wrap: wrap;
+       justify-content: flex-start;
+       li {
+         width: 50%
+       }
+       li:first-child {
+         width: 100%
+       }
+
+       @media (min-width: 768px) {
+         li {
+           width: auto
+         }
+         li:first-child {
+           width: auto;
+         }
+        }
+        label {
+            margin-bottom: 30px;
+          @media (min-width: 768px) {
+            margin-bottom: 0px;
+           }
+        }
+     }
+     .btn.btn-back {
+        bottom: 25px;
+        z-index: 55;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: auto;
+        background-position: -24px -104px;
+     }
+     .btn-selector {
+       height: 25px;
+       color: $color-primary;
+       @media (min-width: 768px) {
+         height: 18px;
+         color: $color-white;
+      }
+     }
+     span {
+       bottom: 8px;
+       font-size: 13px;
+       padding-left: 10px;
+       padding-right: 10px;
+       @media (min-width: 768px) {
+         bottom: 6px;
+         font-size: 10px;
+         padding-left: 5px;
+         padding-right: 5px;
+
+      }
+     }
+  }
+  .selectors-container .btn-selector::after {
+    width: 25px;
+    height: 25px;
+    @media (min-width: 768px) {
+      width: 18px;
+      height: 18px;
+   }
+  }
+  .selectors-container input:checked + .btn-selector.btn-selector-close::after {
+    background: url(../images/code-spritesheet.svg) -3px -273px;
+    @media (min-width: 768px) {
+      background: url(../images/code-spritesheet.svg) -7px -277px;
+   }
   }
   .box:nth-of-type(3) {
     display: flex;
@@ -85,13 +215,13 @@ articles
       text-align: left;
      }
   }
-  .leading-container:before  {
+  /*.leading-container:before  {
     @include triangleUp;
     @media (min-width: 768px) {
       display: none;
     }
 
-  }
+  }*/
   .leading-story-article {
     position: relative;
     padding-top: 15px;
@@ -149,7 +279,7 @@ articles
     height: 28px;
     background-color: $color-primary;
     color: $color-white;
-    font-family: Georgia;
+    font-family: $font-tertiary;
   	font-size: 16px;
   	font-style: italic;
     @include centerCenter;
@@ -216,17 +346,7 @@ articles
 
   }
   .hovereffect.hovereffect-triangle:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    background: $color-white;
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    margin-left: -10px;
-    z-index: 15;
+    @include triangleUp;
    }
   .overlay-left-align {
     display: block !important;
@@ -323,10 +443,9 @@ position: relative;
     padding: 0 !important;
     display: inline !important;
     float: left !important;
-    font-style: normal !important;
-    font-family: Georgia,sans-serif !important;
+    @include linkSmall;
     font-size: 13px !important;
-    font-style: italic !important;
+    font-family: $font-tertiary !important;
     border: none !important;
     color: $color-white !important;
     text-transform: capitalize !important;
@@ -339,6 +458,51 @@ position: relative;
 }
 }
 }
+
+/*-------------------------------------------
+offcanvas
+-------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    top: -300px;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    top: 400px; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: -400px;
+    width: 100%; /* 6 columns */
+  }
+}
+
 
 /*-------------------------------------------
 magazine article
@@ -373,9 +537,7 @@ magazine article
   }
   small {
     color: $color-white;
-    font-family: georgia;
-    font-size: 13px;
-    font-style: italic;
+    @include linkSmall;
   }
   .selectors-container {
     margin-bottom: 40px;
@@ -420,9 +582,7 @@ magazine article
     background-color: $color-secondary;
     padding-top: 0px;
     p {
-      font-size: 13px;
-      font-family: georgia;
-      font-style: italic;
+      @include linkSmall;
       line-height: 120%;
       width: 80%;
       padding: 15px 0 0 15px;
@@ -484,9 +644,7 @@ magazine article
     padding-top: 20px;
     background-color: transparent;
     p {
-      font-size: 13px;
-      font-family: georgia;
-      font-style: italic;
+      @include linkSmall;
       line-height: 120%;
       width: 80%;
     }

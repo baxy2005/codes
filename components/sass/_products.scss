@@ -34,6 +34,10 @@
 }
 }
 .products-2 {
+  margin-bottom: 30px !important;
+  @media (min-width: 768px) {
+    margin-bottom: 100px !important;
+  }
   .col-xs-12:nth-of-type(2) {
     .hovereffect{
       height: auto;

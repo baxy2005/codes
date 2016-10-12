@@ -1,13 +1,77 @@
 /* Scss Document */
 .image-bg.image-bg-kitchen {
     background-image: url(../images/products/kitchen/code-products-kitchen-01.jpg);
-
+    position: relative;
+    filter: brightness(100%)
+}
+.leading-story.leading-story-products:before {
+  display: none;
 }
 .leading-story.leading-story-products {
   height: 405px;
+  position: relative;
+  %left-right-navigation {
+    width: 160px;
+    height: 405px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      text-align: right;
+      padding: 20px;
+
+      &:hover {
+        background-color: $color-secondary;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      &:hover span {
+        opacity: 1;
+        @include linkSmall;
+      }
+      span {
+        opacity: 0;
+      }
+    }
+  }
+  .left-navigation {
+    @extend %left-right-navigation;
+    position: absolute;
+    left: -150px;
+    background-image: url(../images/code-left-arrow.svg);
+    a:hover {
+      background-image: url(../images/code-left-arrow.svg);
+    }
+  }
+  .right-navigation {
+    @extend %left-right-navigation;
+    position: absolute;
+    right: -150px;
+    background-image: url(../images/code-right-arrow.svg);
+    a {
+      justify-content: flex-start;
+    }
+    a:hover {
+      background-image: url(../images/code-right-arrow.svg);
+    }
+    span {
+      text-align: left;
+    }
+  }
+
 }
 .products {
+  margin-top: 30px;
   margin-bottom: 100px;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+ }
 
 }
 .yellow-products-kitchen {
@@ -15,7 +79,10 @@
   height: 400px;
   top: 0px;
   left: 0px;
-  width: 50%;
+  width: 100%;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
   @media (min-width: 1280px) {
     height: 475px;
     }

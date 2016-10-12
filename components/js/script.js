@@ -178,3 +178,9 @@ $(".region-item:last-child .btn-default").hover(function(){
     }, function(){
        $(".region-right").removeClass('region-open');
     });
+// offcanvas
+$(document).ready(function () {
+  $('[data-toggle="offcanvas-2"]').click(function () {
+    $('.row-offcanvas').toggleClass('active')
+  });
+});

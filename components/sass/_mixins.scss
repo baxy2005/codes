@@ -38,3 +38,10 @@ background: $color-white;
 margin-left: -10px;
 z-index: 15;
 }
+
+@mixin linkSmall {
+	font-family: $font-tertiary;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+}
