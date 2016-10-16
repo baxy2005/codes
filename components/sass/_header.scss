@@ -261,26 +261,67 @@ margin-bottom: 30px;
 }
 .dropdown{
   span {
-    width: 20px;
+    width: 13px;
     height: 20px;
     cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     z-index: 99 !important;
     margin-top: -25px;
     margin-bottom: 8px;
     margin-left: 260px;
-    background-image: url(../images/code-spritesheet.png);
-    background-position: -127px -195px;
+  //  background-image: url(../images/code-spritesheet.png);
+  //  background-position: -127px -195px;
+  .icon-dots-top {
+    position: absolute;
+    width: 100%;
+     }
+    .icon-dots-top {
+      margin-top: 0;
+    }
+    .icon-dots-bottom {
+      margin-top: -3px;
+    }
+    .icon-dots-top, .icon-dots-bottom, .icon-dots-center {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 500ms ease-in-out;
+    }
+    .icon-dots-center {
+      justify-content: center;
+    }
+    .icon-dots {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      transition: all 500ms ease-in-out;
+    }
+    .icon-dot {
+      width: 3px;
+      height: 3px;
+      background-color: $color-black;
+      border-radius: 150px;
+      transition: all 500ms ease-in-out;
+    }
   }
 }
 .dropdown.open {
-
-  span {
-    background-image: url(../images/code-spritesheet.png);
-    background-position: -125px -213px;
+  .icon-dot {
+    background-color: $color-primary;
   }
+  .icon-dots {
+    width: 9px;
+ }
+  .icon-dots-top {
+   transform: translateY(-3px);
+ }
+ .icon-dots-bottom {
+  transform: translateY(3px);
+}
 }
 .dropdown-menu {
   border: none;
@@ -343,7 +384,7 @@ margin-bottom: 30px;
       text-align: center;
       background: $color-white;
       color: $color-secondary;
-      @include centerCenter;
+      @include centerCenter (row, center, center);
       margin-right: 10px;
       &:hover {
       background: $color-primary;

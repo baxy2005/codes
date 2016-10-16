@@ -44,8 +44,23 @@
     </div><!-- container-fluid -->
     <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
       <ul class="nav navmenu-nav">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown"><a href="#">References</a><span class="" data-toggle="dropdown"></span>
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown"><a href="#">References</a>
+          <span class="" data-toggle="dropdown">
+            <div class="icon-dots">
+              <div class="icon-dots-top">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-center">
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-bottom">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+            </div>
+          </span>
           <ul class="dropdown-menu">
             <li><a href="#">House</a></li>
             <li><a href="#">Flat</a></li>
@@ -54,14 +69,43 @@
             <li><a href="#">Showroom</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#">Products</a><span class="" data-toggle="dropdown"></span>
+        <li class="dropdown"><a href="#">Products</a>
+          <span class="" data-toggle="dropdown">
+            <div class="icon-dots">
+              <div class="icon-dots-top">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-center">
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-bottom">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+            </div>
+          </span>
           <ul class="dropdown-menu">
             <li><a href="#">Living spaces</a></li>
             <li><a href="#">Types</a></li>
             <li><a href="#">Manufactures</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#">Services</a><span class="" data-toggle="dropdown"></span>
+        <li class="dropdown"><a href="#">Services</a><span class="" data-toggle="dropdown">
+          <div class="icon-dots">
+            <div class="icon-dots-top">
+              <div class="icon-dot"></div>
+              <div class="icon-dot"></div>
+            </div>
+            <div class="icon-dots-center">
+              <div class="icon-dot"></div>
+            </div>
+            <div class="icon-dots-bottom">
+              <div class="icon-dot"></div>
+              <div class="icon-dot"></div>
+            </div>
+          </div>
+        </span>
           <ul class="dropdown-menu">
             <li><a href="#">interior design</a></li>
             <li><a href="#">home styling</a></li>
@@ -69,7 +113,7 @@
           </ul>
         </li>
         <li><a href="#">Company</a></li>
-        <li class="active"><a href="#">Magazine</a></li>
+        <li><a href="#">Magazine</a></li>
         <li><a href="#">Contact us</a></li>
         <li><a href="#">Code Atelier us</a></li>
       </ul>
@@ -133,18 +177,21 @@
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h1><span>CODE</span>SIGN<span> MAGAZINE</span></h1>
-        <button type="button" class="btn btn-default visible-xs" data-toggle="offcanvas-2">filters</button>
+        <button type="button" class="btn btn-default btn-filter visible-xs" data-toggle="offcanvas-2">filters</button>
+        <div class="scroll scroll-subpages visible-xs">
+          <a href="#link1"><button type="button" class="btn btn-default btn-scroll"></button></a>
+        </div>
       </div>
     </div><!--row-->
   </div>
   <div class="image-bg">
   </div>
 </div><!-- leading-story container fluid-->
-<div class="container articles">
+<div class="container articles articles-select">
   <div class="row">
     <div class="leading-container">
       <div class="leading-story-article padding-mobile">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box" id="link1">
           <h3>Lorem ipsum dolor sitamet<br>consectetur kolorka</h3>
           <p>Craselit a metus, semperet urnaetot es, tempus placeratex. Suspendisse potentia a liquam. Craselit a metus, semperet urn aetot es, tempus placeratex. Suspendisse potentia a liquam.</p>
           <button type="button" class="btn btn-default">more about code</button>
@@ -168,94 +215,109 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="hovereffect hovereffect-mobile">
-        <ul class="nav social-icons social-icons-transparent">
-          <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-        </ul>
-        <div class="image-container">
-          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-01.jpg" alt="">
-        </div>
-        <div class="overlay overlay-left-align padding-mobile">
-          <h3>BEST HOME EVER</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
-          <a class="info" href="#">Read More</a>
-        </div>
+          <a href="#">
+            <ul class="nav social-icons social-icons-transparent">
+              <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
+              <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+              <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+              <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
+              <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
+            </ul>
+            <div class="image-container">
+              <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-01.jpg" alt="">
+            </div>
+            <div class="overlay overlay-left-align padding-mobile">
+              <h3>BEST HOME EVER</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+              <a class="info" href="#">Read More</a>
+            </div>
+        </a>
       </div>
     </div><!-- big article-->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box box-flex">
       <div class="magazine-box">
         <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+        <button type="button" class="btn btn-default visible-xs">read more</button>
       </div><!-- magazine text-->
       <div class="hovereffect hovereffect-triangle">
-        <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-02.jpg" alt="">
-        <div class="overlay overlay-triangle">
-            <button type="button" class="btn btn-default btn-overlay">read more</button>
-        </div>
+          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-02.jpg" alt="">
+          <div class="overlay overlay-triangle">
+            <a href="#">
+              <button type="button" class="btn btn-default btn-overlay hidden-xs">read more</button>
+            </a>
+          </div>
       </div>
     </div><!--small article -->
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
       <div class="hovereffect hovereffect-mobile">
-        <ul class="nav social-icons social-icons-transparent">
-          <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-        </ul>
-        <div class="image-container">
-          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-03.jpg" alt="">
-        </div>
-        <div class="overlay overlay-left-align padding-mobile">
-          <h3>BEST HOME EVER</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
-          <a class="info" href="#">Read More</a>
-        </div>
+        <a href="#">
+          <ul class="nav social-icons social-icons-transparent">
+            <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
+          </ul>
+          <div class="image-container">
+            <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-03.jpg" alt="">
+          </div>
+          <div class="overlay overlay-left-align padding-mobile">
+            <h3>BEST HOME EVER</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+            <a class="info" href="#">Read More</a>
+          </div>
+        </a>
       </div>
     </div><!-- smaller article-->
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
       <div class="hovereffect hovereffect-mobile">
-        <ul class="nav social-icons social-icons-transparent">
-          <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-        </ul>
-        <div class="image-container">
-          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-04.jpg" alt="">
-        </div>
-        <div class="overlay overlay-left-align padding-mobile">
-          <h3>BEST HOME EVER</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
-          <a class="info" href="#">Read More</a>
-        </div>
+        <a href="#">
+          <ul class="nav social-icons social-icons-transparent">
+            <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
+          </ul>
+          <div class="image-container">
+            <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-04.jpg" alt="">
+          </div>
+          <div class="overlay overlay-left-align padding-mobile">
+            <h3>BEST HOME EVER</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+            <a class="info" href="#">Read More</a>
+          </div>
+        </a>
       </div>
     </div><!-- smaller article-->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box box-flex">
       <div class="magazine-box">
         <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+        <button type="button" class="btn btn-default visible-xs">read more</button>
       </div><!-- magazine text-->
       <div class="hovereffect hovereffect-triangle">
         <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-05.jpg" alt="">
         <div class="overlay overlay-triangle">
-            <button type="button" class="btn btn-default btn-overlay">read more</button>
+          <a href="#">
+            <button type="button" class="btn btn-default btn-overlay hidden-xs">read more</button>
+          </a>
         </div>
       </div>
     </div><!--small article -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box box-flex">
       <div class="magazine-box">
         <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+        <button type="button" class="btn btn-default visible-xs">read more</button>
       </div><!-- magazine text-->
       <div class="hovereffect hovereffect-triangle">
         <img class="img-responsive" src="images/magazine/code-magazine-tn-01.jpg" alt="">
         <div class="overlay">
-            <button type="button" class="btn btn-default btn-overlay">read more</button>
+          <a href="#">
+            <button type="button" class="btn btn-default btn-overlay hidden-xs">read more</button>
+          </a>
         </div>
       </div><!-- magazine thumbnail-->
     </div><!--small article-->
@@ -263,43 +325,51 @@ Sed vehicula est auctor augue tristique efficitur. Pellentesque aliquet consecte
       <div class="hovereffect hovereffect-triangle hovereffect-triangle-down">
         <img class="img-responsive" src="images/magazine/code-magazine-tn-03.jpg" alt="">
         <div class="overlay overlay-triangle">
-            <button type="button" class="btn btn-default btn-overlay">read more</button>
+          <a href="#">
+            <button type="button" class="btn btn-default btn-overlay hidden-xs">read more</button>
+          </a>
         </div>
       </div><!-- small article-->
       <div class="magazine-box">
         <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+        <button type="button" class="btn btn-default visible-xs">read more</button>
       </div><!-- magazine text-->
     </div><!--small article -->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 box box-flex">
       <div class="magazine-box">
         <h4>PHILIPPE STARCK <br>A CODE-HOZ IGAZOLT</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+        <button type="button" class="btn btn-default visible-xs">read more</button>
       </div><!-- magazine text-->
       <div class="hovereffect hovereffect-triangle">
         <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-08.jpg" alt="">
         <div class="overlay">
-            <button type="button" class="btn btn-default btn-overlay">read more</button>
+          <a href="#">
+            <button type="button" class="btn btn-default btn-overlay hidden-xs">read more</button>
+          </a>
         </div>
       </div><!-- magazine thumbnail-->
     </div><!--small article-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="hovereffect hovereffect-mobile">
-        <ul class="nav social-icons social-icons-transparent">
-          <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-          <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-        </ul>
-        <div class="image-container">
-          <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-09.jpg" alt="">
-        </div>
-        <div class="overlay overlay-left-align padding-mobile">
-          <h3>BEST HOME EVER</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. Quisque a massa sapien. Fusce pretium us nisl, fermentum dapibus tellus.</p>
-          <a class="info" href="#">Read More</a>
-        </div>
+        <a href="#">
+          <ul class="nav social-icons social-icons-transparent">
+            <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
+            <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
+          </ul>
+          <div class="image-container">
+            <img class="img-responsive" src="images/magazine-page/code-magazine-page-article-09.jpg" alt="">
+          </div>
+          <div class="overlay overlay-left-align padding-mobile">
+            <h3>BEST HOME EVER</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dui diam. Sed ac orci sit amet odio mattis dictum. <span class="hidden-xs"> Quisque a massa sapien. Fusce pretium rhoncus nisl, fermentum dapibus tellus.</span> </p>
+            <a class="info" href="#">Read More</a>
+          </div>
+        </a>
       </div>
     </div><!-- big article-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

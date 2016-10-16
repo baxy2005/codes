@@ -43,12 +43,9 @@ leading story
         order: 1;
         height: auto;
         }
-        .btn-default {
-          position: absolute;
+        .btn-filter {
+          @include absoluteCenterBtn;
           bottom: 70px;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
         }
         .btn-default.btn-back {
           right: auto;
@@ -68,12 +65,9 @@ leading story
 
   }
   .image-bg{
-    background-image: url(../images/magazine-page/code-magazine-page-main-bg.jpg);
     -webkit-filter: brightness(40%);
     filter: brightness(40%);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    @include bgImage ('../images/magazine-page/code-magazine-page-main-bg.jpg');
     position: absolute;
     top: 0;
     left: 0;
@@ -110,11 +104,12 @@ leading story
     color: $color-white;
   }
   .selectors-container {
-    @include centerCenter;
+    @include centerCenter (row, center, center);
     flex-wrap: wrap;
     background-color: $color-secondary;
-    padding: 20px;
+    padding: 30px;
     height: 405px;
+    z-index: 56;
     @media (min-width: 768px) {
       height: 18px;
       margin-bottom: 185px;
@@ -123,19 +118,19 @@ leading story
       height: auto;
      }
      .selectors {
-       @include centerCenter;
+       @include centerCenter (row, center, space-between);
        flex-wrap: wrap;
-       justify-content: flex-start;
        li {
-         width: 50%
+         width: auto;
        }
        li:first-child {
-         width: 100%
+         width: 100%;
        }
 
        @media (min-width: 768px) {
+         justify-content: center;
          li {
-           width: auto
+           width: auto;
          }
          li:first-child {
            width: auto;
@@ -206,6 +201,42 @@ leading story
 /*-------------------------------------------
 articles
 -------------------------------------------*/
+.articles-select {
+  .hovereffect .overlay {
+    background-color: rgba(0,0,0,0.0);
+    @media screen and (min-width: 768px) {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
+  .overlay .btn-default, .magazine-box .btn-default, .overlay .info {
+    @include absoluteCenterBtn;
+    bottom: 20px;
+    @media screen and (min-width: 768px) {
+      position: relative;
+      bottom: auto;
+    }
+  }
+  .hovereffect a {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  align-items: center;
+  }
+  .hovereffect a.info {
+    top: auto;
+    bottom:20px;
+    @media screen and (min-width: 768px) {
+      top: 3px;
+    }
+  }
+
+}
+
 
 .articles, .services {
   position: relative;
@@ -282,7 +313,7 @@ articles
     font-family: $font-tertiary;
   	font-size: 16px;
   	font-style: italic;
-    @include centerCenter;
+    @include centerCenter (row, center, center);
     margin-bottom: 35px;
     margin-top: 25px;
     @media (min-width: 768px) {

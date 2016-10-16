@@ -34,7 +34,22 @@
     <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
       <ul class="nav navmenu-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown"><a href="#">References</a><span class="" data-toggle="dropdown"></span>
+        <li class="dropdown"><a href="#">References</a>
+          <span class="" data-toggle="dropdown">
+            <div class="icon-dots">
+              <div class="icon-dots-top">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-center">
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-bottom">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+            </div>
+          </span>
           <ul class="dropdown-menu">
             <li><a href="#">House</a></li>
             <li><a href="#">Flat</a></li>
@@ -43,14 +58,43 @@
             <li><a href="#">Showroom</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#">Products</a><span class="" data-toggle="dropdown"></span>
+        <li class="dropdown"><a href="#">Products</a>
+          <span class="" data-toggle="dropdown">
+            <div class="icon-dots">
+              <div class="icon-dots-top">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-center">
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-bottom">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+            </div>
+          </span>
           <ul class="dropdown-menu">
             <li><a href="#">Living spaces</a></li>
             <li><a href="#">Types</a></li>
             <li><a href="#">Manufactures</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#">Services</a><span class="" data-toggle="dropdown"></span>
+        <li class="dropdown"><a href="#">Services</a><span class="" data-toggle="dropdown">
+          <div class="icon-dots">
+            <div class="icon-dots-top">
+              <div class="icon-dot"></div>
+              <div class="icon-dot"></div>
+            </div>
+            <div class="icon-dots-center">
+              <div class="icon-dot"></div>
+            </div>
+            <div class="icon-dots-bottom">
+              <div class="icon-dot"></div>
+              <div class="icon-dot"></div>
+            </div>
+          </div>
+        </span>
           <ul class="dropdown-menu">
             <li><a href="#">interior design</a></li>
             <li><a href="#">home styling</a></li>
@@ -91,6 +135,24 @@
         <a href="#link1"><button type="button" class="btn btn-default btn-scroll"></button></a>
       </div>
       <div class="owl-carousel owl-carousel-main  owl-theme top-carousel">
+        <div class="item">
+          <div class="hovereffect-2">
+            <div class="hover-content">
+              <img class="img-responsive" src="images/code-main-carousel-01.jpg" alt="">
+              <div class="overlay-2">
+                <h3>Iratkozzon fel <br>hírlevelünkre</h3>
+                <p>Craselit a metus, semperet urnaetot es, tempusplaceratex. Suspendisse potentia a liquam. Craselita metus, semperet urnaetot es, tempus placeratex.Suspendisse potentia a liquam. </p>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail11" placeholder="">
+                  </div>
+                  <button type="submit" class="btn btn-default btn-carousel">Add</button>
+                </form>
+              </div>
+            </div><!--hover-content -->
+          </div><!--hoverefect -->
+        </div><!--one carousel item -->
         <div class="item">
           <div class="hovereffect-2">
             <div class="hover-content">
@@ -265,7 +327,27 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-xs-12">
         <div class="owl-carousel owl-carousel-services">
-          <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
+          <div class="item">
+            <div class="product-item-container" id="product-item-container-1">
+              <input name="product-itme" class="product-item-input"  type="checkbox" id="product-item-1">
+              <label for="product-item-1" class="product-item-button" data-toggle="product-item">
+                <span>
+                </span>
+              </label>
+              <div class="product-item-info">
+                <div class="product-item-image">
+                  <p>C</p>
+                  <div class="image-mask"></div>
+                </div>
+                <div class="product-item-text">
+                  <h6>KLIPPAN</h6>
+                  <p>Lorem ipsumdolor sit amet es con sectetur adipiscing elit es akkor ijzra. Kuozkas es mited, asi muvolare. </p>
+                  <button type="button" class="btn btn-default btn-detail-order">detailS & order </button>
+                </div>
+              </div>
+            </div>
+            <img src="images/product-gallery/code-product-carousel-01.jpg" alt="">
+          </div>
           <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
           <div class="item"><img src="images/product-gallery/bb_italia_small.png" alt=""></div>
           <div class="item"><img src="images/product-gallery/cassina_small.png" alt=""></div>
@@ -506,7 +588,7 @@
 </div><!--container fluid -->
 </main><!--main-->
 <footer>
-  <div class="container">
+  <div class="container padding-mobile">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <a href=""><img src="images/code-logo-footer.svg" alt=""></a>

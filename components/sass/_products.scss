@@ -6,10 +6,6 @@
 .leading-story.leading-story-products {
   height: 405px;
 }
-.products {
-  margin-bottom: 100px;
-
-}
 .yellow-products {
 .yellow-box-1{
   width: 50%;
@@ -63,7 +59,7 @@
 one product
 -------------------------------------------*/
 .one-product {
-  margin-top: 55px;
+  margin-top: 50px;
   margin-bottom: 0;
   h5 {
     text-transform: uppercase;
@@ -95,6 +91,7 @@ one product
     .owl-item img {
       width:100%;
       display: inline-block;
+      margin-bottom: 50px;
       @media (min-width: 768px) {
         width: auto;
         }

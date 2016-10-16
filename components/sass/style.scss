@@ -147,10 +147,23 @@ margin-bottom: 100px;
 	border: 2px solid $color-primary;
 }
 .btn.btn-detail-order {
-  min-width: 155px;
-  height: 29px;
-  font-size: 11px;
-  line-height: 1.3;
+  @extend .btn;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  &:hover {
+    color: $color-white;
+  }
+  @media (min-width: 768px) {
+    min-width: 155px;
+    height: 29px;
+    font-size: 11px;
+    line-height: 1.3;
+    position: relative;
+    bottom: auto;
+     }
 }
 .btn.btn-overlay {
   color: $color-white;
@@ -213,6 +226,7 @@ margin-bottom: 100px;
   position: absolute;
   top: 60px;
   z-index: 55;
+  transition: .02s ease-in-out 0s;
 }
 .btn.btn-gallery {
   @extend .btn.btn-scroll;
@@ -234,7 +248,7 @@ margin-bottom: 100px;
 
 .btn-text-hidden{
   position: relative;
-  left: 20px;
+  left: -15px;
   display: block;
   min-width: 0px;
   width: 0px;
@@ -247,6 +261,11 @@ margin-bottom: 100px;
   text-align: left;
   overflow: hidden;
   transition: all .2s ease-in;
+  background-image: url(../images/code-back-arrow.svg);
+  background-position: 3px -102px;
+  span {
+    margin-left: 39px;
+  }
 }
 .btn.btn-back.btn-back-light .btn-text-hidden{
   background-color: $color-secondary;
@@ -262,6 +281,11 @@ margin-bottom: 100px;
   color: $color-white;
 
 }
+.btn-back:hover  {
+  width: 168px;
+  transition: .25s ease-in-out .1s;
+}
+
 .btn.btn-back.btn-back-light:hover .btn-text-hidden {
   color: $color-black;
 }
@@ -290,7 +314,12 @@ margin-bottom: 100px;
   .container-fluid {
   position: relative;
   }
-
+.on-off-2 {
+  margin-top: 97px;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+     }
+}
 
     /*social icons*/
     .social-icons {
@@ -304,7 +333,7 @@ margin-bottom: 100px;
         text-align: center;
         background: $color-white;
         color: $color-secondary;
-        @include centerCenter;
+        @include centerCenter (row, center, center);
         margin-right: 10px;
         @include fadeIn;
         &:hover {
@@ -356,7 +385,7 @@ margin-bottom: 100px;
 .selectors-container{
   height: 18px;
   .selectors {
-    @include centerCenter;
+    @include centerCenter (row, center, center);
   }
   input {
     display: none;
@@ -401,7 +430,10 @@ input:checked + .btn-selector {
 }
 .selector-container {
   height: 18px;
-  margin: 0 10px;
+  margin: 0px;
+  @media (min-width: 768px) {
+    margin: 0 10px 15px 10px;
+  }
 }
 }
 
@@ -441,7 +473,7 @@ opening project gallery
     width: 100%;
   }
   .col-xs-12:first-child, .col-xs-12:last-child {
-    @include centerCenter;
+    @include centerCenter (row, center, center);
   }
     .col-xs-12:first-child {
       justify-content: flex-start;
@@ -451,6 +483,15 @@ opening project gallery
   margin-top: 45px;
   @media (min-width: 768px) {
     margin-top: 100px;
+    }
+    .overlay {
+      @include centerCenter (column, center, center);
+      h2 {
+        margin-top: 0px;
+      }
+      .info {
+        margin-bottom: 0px;
+      }
     }
 }
 .project-gallery, .company {
@@ -486,12 +527,119 @@ opening product gallery
      margin-top: 30px;
      }
  }
+ .product {
+.product-item-container input:checked + .product-item-button {
+  background-color: $color-primary !important;
+
+}
+   .product-item-container {
+     position: absolute;
+      bottom: 0;
+      top: 59%;
+      left: 35%;
+      display: flex;
+      z-index: 55;
+      .product-item-input {
+        display: none;
+      }
+      .product-item-button {
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0,0,0,0.2);
+        border: 2px solid #f4633a;
+        color: #fff;
+        cursor: pointer;
+        font-family: $font-primary-medium;
+        font-size: 20px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-right: 2px;
+      }
+      .product-item-input:checked + .product-item-button span::after {
+    content: "x";
+      }
+      .product-item-button span::after {
+          content: "C";
+      }
+
+      .product-item-text {
+        width: 258px;
+        padding: 20px;
+        color: $color-white;
+        position: relative;
+        background-color: $color-primary;
+        h6 {
+          font-size: 13px;
+          margin-top: 0px;
+          text-transform: uppercase;
+          font-family: $font-primary-medium;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 11px;
+          line-height: 1.2;
+        }
+        .btn-detail-order {
+          width: 156px;
+          height: 30px;
+          border-color: $color-white;
+          color: $color-white;
+          position: absolute;
+          left: -60px;
+          bottom: 20px;
+          right: 0;
+          &:hover {
+            color: $color-primary;
+            background-color: $color-white;
+          }
+        }
+      }
+      .product-item-info.active {
+        display: flex;
+      }
+      .product-item-info {
+        width: 400px;
+        height: 142px;
+        font-size: 11px;
+        display: none;
+
+
+      }
+      .product-item-image {
+        width: 142px;
+        height: 142px;
+        background-image: url(../images/product-gallery/product-details/code-product-detail-01.jpg);
+        background-repeat: no-repeat;
+        @include centerCenter (row, center, center);
+        position: relative;
+        p {
+          font-size: 54px;
+          color: $color-secondary;
+          z-index: 2;
+        }
+        .image-mask {
+          background: rgba(0,0,0,0.4);
+          width: 142px;
+          height: 142px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+         }
+      }
+   }
+ }
 
  /*-------------------------------------------
  opening services
  -------------------------------------------*/
 
  .services {
+   p {
+     text-align: left;
+   }
    .overlay {
      p {
        width: 85%;
@@ -524,7 +672,7 @@ opening product gallery
     margin-top: -40px;
   }
   .col-xs-12:nth-child(1) {
-    @include centerCenter;
+    @include centerCenter (row, center, center);
   }
   .img-responsive {
     width: auto;
@@ -547,7 +695,7 @@ opening product gallery
     width: 144px;
     right: 0;
     background-color: rgba($color-primary,0.7);
-    @include centerCenter;
+    @include centerCenter (row, center, center);
     border-radius: 160px
   }
 }
@@ -565,7 +713,7 @@ opening magazine
   background-color: $color-white;
   padding: 20px;
   clear: both;
-  height: auto;
+  height: 200px;
   @media (min-width: 768px) {
     height: 200px;
   }
@@ -584,8 +732,7 @@ opening magazine
   }
 }
 .overlay {
-@include centerCenter;
-flex-direction: column;
+@include centerCenter (column, center, center);
 }
 }
 
@@ -624,7 +771,7 @@ flex-direction: column;
       }
    }
   .overlay {
-  @include centerCenter;
+  @include centerCenter (row, center, center);
   }
   .col-xs-12:nth-child(4) {
     margin-top: 0px;
@@ -677,13 +824,13 @@ opening reach out
     text-transform: uppercase;
     text-align: center;
     font-family: $font-primary-medium;
-      @include centerCenter;
+      @include centerCenter ( row, center, center);
   }
   .col-xs-12:nth-child(1)  {
     height: auto;
     @media (min-width: 768px) {
       height: 200px;
-      @include centerCenter;
+      @include centerCenter (row, center, center);
     }
     @media (min-width: 1280px) {
       height: 237.5px;
@@ -737,7 +884,7 @@ opening contact
     	text-align: center;
     	background: $color-secondary;
     	color: white;
-      @include centerCenter;
+      @include centerCenter (row, center, center);
       margin-right: 15px;
     	&:hover {
     	background: $dark-color-secondary;
@@ -936,8 +1083,263 @@ alterier events
 alterier
 -------------------------------------------*/
 .atelier {
-  margin-bottom: 202px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 202px
+  }
+  .row:first-child {
+    margin-bottom: 0px
+  }
 }
+.atelier, .articles {
+  .hovereffect:hover img {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+    @media screen and (min-width: 768px) {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    }
+}
+  .box-flex {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      display: auto;
+    }
+    .hovereffect.hovereffect-triangle::before {
+      bottom: -10px;
+      top: auto;
+      @media screen and (min-width: 768px) {
+        top: -10px;
+        bottom: auto;
+      }
+    }
+    .hovereffect {
+      height: auto;
+      width: auto;
+    }
+  }
+  .hovereffect-mobile .overlay {
+    padding: 20px;
+    height: 200px;
+    @media screen and (min-width: 768px) {
+      height: 100%;
+      padding: 0;
+    }
+    p {
+      margin: 0px;
+      line-height: 17.5px;
+      @media screen and (min-width: 768px) {
+      margin-left: 20px;
+      margin-bottom: 15px;
+      margin-top: 60px;
+      line-height: 1.42857143;
+      }
+    }
+  h3 {
+    font-size: 20px;
+    font-family: $font-primary;
+    margin-bottom: 8px;
+    position: relative;
+    text-align: left;
+    left: auto;
+    top: auto;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      font-family: $font-primary-medium;
+      margin-bottom: 15px;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
+  }
+  }
+.magazine-box {
+  order: 2;
+  @media screen and (min-width: 768px) {
+    order: 1;
+  }
+  h4, h3, .hovereffect-mobile .overlay h3 {
+    font-size: 20px;
+    font-family: $font-primary;
+    margin-bottom: 8px;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      font-family: $font-primary-medium;
+    }
+  }
+  p {
+    line-height: 17.5px;
+    @media screen and (min-width: 768px) {
+    line-height: 1.42857143;
+    }
+  }
+
+  .btn-detail-order {
+    @extend .btn;
+    @media screen and (min-width: 768px) {
+    }
+  }
+}
+.hovereffect {
+  order: 1;
+  @media screen and (min-width: 768px) {
+    order: 2;
+  }
+}
+}
+.atelier-margin-top {
+  margin-top: 195px;
+}
+.container-fluid.yellow-atelier {
+  -webkit-transition: all .35s ease-out;
+       -o-transition: all .35s ease-out;
+          transition: all .35s ease-out;
+
+}
+
+.leading-story-alelier {
+  .row:first-child {
+    height: auto;
+  }
+  .selectors-container {
+    background-color: $color-primary;
+    padding: 0px;
+    height: auto;
+    z-index: 1;
+    margin-bottom: 0px;
+    align-items: flex-end;
+    @media screen and (min-width: 768px) {
+      height: 600px;
+
+ }
+    .col-lg-6:last-child {
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-left: 30px;
+        @media screen and (min-width: 768px) {
+          padding-bottom: 85px;
+          padding-left: 30px;
+           }
+    }
+  }
+  .atelier-form-left-image {
+    @include bgImage ('../images/atelier/code-atelier-form-left-bg.jpg');
+    height: 100%
+  }
+  /*-------------------------------------------
+offcanvas
+  -------------------------------------------*/
+  @media screen and (max-width: 767px) {
+
+    .row-offcanvas-right {
+      top: 450px;
+    }
+
+    .sidebar-offcanvas {
+      position: absolute;
+      top: 0xpx;
+      width: 100%; /* 6 columns */
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .row-offcanvas {
+      position: relative;
+      -webkit-transition: all .25s ease-out;
+           -o-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+    }
+
+    .row-offcanvas-right {
+      top: -600px;
+    }
+
+    .row-offcanvas-left {
+      left: 0;
+    }
+
+    .row-offcanvas-right
+    .sidebar-offcanvas {
+    }
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+      left: -50%; /* 6 columns */
+    }
+
+    .row-offcanvas-right.active {
+      top: 0px; /* 6 columns */
+    }
+
+    .row-offcanvas-left.active {
+      left: 50%; /* 6 columns */
+    }
+
+    .sidebar-offcanvas {
+      position: absolute;
+      top: 0xpx;
+      width: 100%; /* 6 columns */
+    }
+  }
+
+}
+.atelier-form-info {
+  background-color: $color-primary;
+  padding: 20px !important;
+  @media screen and (min-width: 768px) {
+    padding: 0 0 85px 30px !important;
+     }
+  h3 {
+    font-size: 20px;
+    line-height: 25px;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+       }
+  }
+  p, h3 {
+    font-family: $font-primary-book;
+    color: $color-white;
+  }
+  p {
+    text-align: left;
+    margin: 0 0 20px 0;
+  }
+  input {
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 10px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+    width: 280px;
+    margin-bottom: 20px;
+    }
+  }
+  label {
+    font-size: 11px;
+    font-family: $font-primary;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+  .form-control {
+    border: 2px solid $color-white;
+    background: transparent;
+    height: 40px;
+    color: $color-white;
+  }
+  .btn-carousel {
+    margin-top: 10px;
+    @media screen and (min-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+}
+
+
 .image-bg.image-bg-atelier{
     background-image: url(../images/atelier/code-atelier-01.jpg);
 

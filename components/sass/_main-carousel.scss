@@ -46,17 +46,24 @@ one product carousel
 -------------------------------------------*/
 .owl-carousel-product-one-product, #owl-carousel-product-list {
 	.owl-nav [class*="owl-"]{
-		margin: 0 -115px;
+		margin: 0 -200px;
 		background: transparent;
+		width: 160px;
+		height: 100%;
+		top: 0;
 		&:hover {
-			background: transparent;
+			background: $color-secondary;
 		}
 	}
+	.owl-prev, .owl-next {
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+		 }
 	.owl-prev {
-		background-position: -88px -235px !important;
+		background-image: url(../images/code-left-arrow.svg)!important;
 			}
 	.owl-next {
-		background-position: -115px -235px  !important;
+		background-image: url(../images/code-right-arrow.svg)!important;
 	  }
 }
 
@@ -149,6 +156,34 @@ top main carousel hover
 
 
 .top-carousel-container {
+
+	.form-group {
+		margin-bottom: 10px;
+		width: 100%;
+		@media screen and (min-width: 768px) {
+		width: 285px;
+		margin-bottom: 10px;
+		}
+	}
+	label {
+		font-size: 11px;
+		font-family: $font-primary;
+		color: $color-white;
+		text-transform: uppercase;
+	}
+	.form-control {
+		border: 2px solid $color-white;
+		background: transparent;
+		height: 40px;
+		color: $color-white;
+	}
+	.form-control:focus {
+		border-color: $color-white;
+	}
+	.btn-carousel {
+		width: 140px;
+	}
+
 	/*social icons*/
 	.social-icons {
 		display: flex;
@@ -162,7 +197,7 @@ top main carousel hover
 			text-align: center;
 			background: $light-color-white;
 			color: $color-primary;
-			@include centerCenter;
+			@include centerCenter (row, center, center);
 			margin-right: 10px;
 			&:hover {
 			background: $color-white;
@@ -186,13 +221,13 @@ top main carousel hover
     cursor: default;
 }
 .hovereffect-2 .overlay-2 {
-    width: 37.5%;
+    width: 38%;
     position: absolute;
     overflow: hidden;
-		@include centerCenter;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
+		@include centerCenter (column, flex-start, center);
+	//	flex-direction: column;
+	//	justify-content: center;
+	//	align-items: flex-start;
 		text-align: left;
 		color: $color-white;
 	top: 0;
@@ -205,7 +240,7 @@ top main carousel hover
 	-webkit-transform: translate3d(100%,0,0);
 	transform: translate3d(100%,0,0);
 	height: 100%;
-	left: 62.5%;
+	left: 62%;
 	h3, p {
 		color: $color-white;
 	}
@@ -298,4 +333,8 @@ top main carousel scroll
 	bottom: 13%;
 	margin-left: -17.5px;
 	z-index: 55;
+}
+.scroll-subpages {
+	@extend .scroll;
+	bottom: 4.5%;
 }

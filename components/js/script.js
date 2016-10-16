@@ -3,7 +3,7 @@ $('.owl-carousel-main').owlCarousel({
     animateOut: 'fadeOut',
     loop:true,
     margin:0,
-    nav:true,
+    nav:false,
     items: 1,
     autoplay: true,
     navText: [
@@ -182,5 +182,9 @@ $(".region-item:last-child .btn-default").hover(function(){
 $(document).ready(function () {
   $('[data-toggle="offcanvas-2"]').click(function () {
     $('.row-offcanvas').toggleClass('active')
+    $('.container-fluid.yellow-atelier').toggleClass('atelier-margin-top')
   });
+});
+$('[data-toggle="product-item"]').click(function () {
+  $('.product-item-info').toggleClass('active')
 });

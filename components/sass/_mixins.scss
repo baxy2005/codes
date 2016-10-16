@@ -6,10 +6,12 @@
 	margin:0px;
 }
 
-@mixin centerCenter {
+@mixin centerCenter ($flex-direction, $align-items, $justify-content)  {
 display: flex;
-justify-content: center;
-align-items: center;
+flex-direction: $flex-direction;
+align-items: $align-items;
+justify-content: $justify-content;
+
 }
 @mixin fadeIn {
 	-moz-transition: all .2s ease-in;
@@ -25,6 +27,15 @@ align-items: center;
 	margin-right: auto;
 
 }
+@mixin absoluteCenterBtn {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left:  auto;
+	margin-right: auto;
+	width: 217px;
+}
+
 @mixin triangleUp {
 content: '';
 position: absolute;
@@ -44,4 +55,10 @@ z-index: 15;
 	font-size: 13px;
 	font-weight: normal;
 	font-style: italic;
+}
+@mixin bgImage ($image) {
+background-image: url($image);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
 }

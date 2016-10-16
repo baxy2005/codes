@@ -68,9 +68,10 @@
 }
 .products {
   margin-top: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   @media (min-width: 768px) {
     margin-top: 0px;
+    margin-bottom: 100px;
  }
 
 }
@@ -118,7 +119,7 @@ h1 {
 .one-product-selected {
   .hovereffect {
     .col-xs-12:nth-of-type(1){
-      @include centerCenter;
+      @include centerCenter (row, center, center);
     }
     .col-xs-12:nth-of-type(2){
       height: 545px;

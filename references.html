@@ -42,8 +42,23 @@
     </div><!-- container-fluid -->
     <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
       <ul class="nav navmenu-nav">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown"><a href="#">References</a><span class="" data-toggle="dropdown"></span>
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown"><a href="#">References</a>
+          <span class="" data-toggle="dropdown">
+            <div class="icon-dots">
+              <div class="icon-dots-top">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-center">
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-bottom">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+            </div>
+          </span>
           <ul class="dropdown-menu">
             <li><a href="#">House</a></li>
             <li><a href="#">Flat</a></li>
@@ -52,14 +67,43 @@
             <li><a href="#">Showroom</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#">Products</a><span class="" data-toggle="dropdown"></span>
+        <li class="dropdown"><a href="#">Products</a>
+          <span class="" data-toggle="dropdown">
+            <div class="icon-dots">
+              <div class="icon-dots-top">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-center">
+                <div class="icon-dot"></div>
+              </div>
+              <div class="icon-dots-bottom">
+                <div class="icon-dot"></div>
+                <div class="icon-dot"></div>
+              </div>
+            </div>
+          </span>
           <ul class="dropdown-menu">
             <li><a href="#">Living spaces</a></li>
             <li><a href="#">Types</a></li>
             <li><a href="#">Manufactures</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#">Services</a><span class="" data-toggle="dropdown"></span>
+        <li class="dropdown"><a href="#">Services</a><span class="" data-toggle="dropdown">
+          <div class="icon-dots">
+            <div class="icon-dots-top">
+              <div class="icon-dot"></div>
+              <div class="icon-dot"></div>
+            </div>
+            <div class="icon-dots-center">
+              <div class="icon-dot"></div>
+            </div>
+            <div class="icon-dots-bottom">
+              <div class="icon-dot"></div>
+              <div class="icon-dot"></div>
+            </div>
+          </div>
+        </span>
           <ul class="dropdown-menu">
             <li><a href="#">interior design</a></li>
             <li><a href="#">home styling</a></li>
@@ -67,7 +111,7 @@
           </ul>
         </li>
         <li><a href="#">Company</a></li>
-        <li class="active"><a href="#">Magazine</a></li>
+        <li><a href="#">Magazine</a></li>
         <li><a href="#">Contact us</a></li>
         <li><a href="#">Code Atelier us</a></li>
       </ul>
@@ -96,54 +140,63 @@
 <div class="container-fluid leading-story leading-story-products on-off">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <button type="button" class="btn btn-default btn-back"><span class="btn-text-hidden">back to home</span></button>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="row row-offcanvas row-offcanvas-right">
+            <div class="selectors-container sidebar-offcanvas">
+              <ul class="nav selectors">
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" checked value="all" id="references-filter-1">
+                    <label for="references-filter-1" class="btn-selector btn-selector-close"><span>All</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="houses" id="references-filter-2">
+                    <label for="references-filter-2" class="btn-selector btn-selector-close"><span>hotels</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-3">
+                    <label for="references-filter-3" class="btn-selector btn-selector-close"><span>offices</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-4">
+                    <label for="references-filter-4" class="btn-selector btn-selector-close"><span>Homes</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-5">
+                    <label for="references-filter-5" class="btn-selector btn-selector-close"><span>showroom</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-6">
+                    <label for="references-filter-6" class="btn-selector btn-selector-close"><span>HOME STYLING</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-7">
+                    <label for="references-filter-7" class="btn-selector btn-selector-close"><span>DESIGN SERVICE</span></label>
+                  </div><!--selectors-container-->
+                </li>
+              </ul>
+              <button type="button" class="btn btn-default btn-back visible-xs" data-toggle="offcanvas-2"></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <button type="button" class="btn btn-default btn-back"><span class="btn-text-hidden"><span>back to home</span></span></button>
           <h1><span>References</span></h1>
-          <div class="selectors-container">
-            <ul class="nav selectors">
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" checked value="all" id="references-filter-1">
-                  <label for="references-filter-1" class="btn-selector btn-selector-close"><span>All</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="houses" id="references-filter-2">
-                  <label for="references-filter-2" class="btn-selector btn-selector-close"><span>hotels</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-3">
-                  <label for="references-filter-3" class="btn-selector btn-selector-close"><span>offices</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-4">
-                  <label for="references-filter-4" class="btn-selector btn-selector-close"><span>Homes</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-5">
-                  <label for="references-filter-5" class="btn-selector btn-selector-close"><span>showroom</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-6">
-                  <label for="references-filter-6" class="btn-selector btn-selector-close"><span>HOME STYLING</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-7">
-                  <label for="references-filter-7" class="btn-selector btn-selector-close"><span>DESIGN SERVICE</span></label>
-                </div><!--selectors-container-->
-              </li>
-            </ul>
+          <button type="button" class="btn btn-default btn-filter visible-xs" data-toggle="offcanvas-2">filters</button>
+          <div class="scroll scroll-subpages visible-xs">
+            <a href="#link1"><button type="button" class="btn btn-default btn-scroll"></button></a>
           </div>
         </div>
       </div><!--row-->
@@ -154,7 +207,7 @@
 <div class="container-fluid yellow-products">
   <div class="container articles products references">
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="link1">
         <div class="hovereffect">
           <img class="img-responsive" src="images/references/code-references-02.jpg" alt="">
           <div class="overlay">
@@ -277,10 +330,10 @@
 </div><!--  container fluid-->
 </main><!--main-->
 <footer>
-  <div class="container">
+  <div class="container padding-mobile">
     <div class="row">
-      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-        <a href=""><img src="images/code-logo-gray.png" width="100" height="21.5" alt=""></a>
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
+        <a href=""><img src="images/code-logo-footer.svg" width="100" height="21.5" alt=""></a>
       </div><!--brand-->
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
         <form class="form-inline form-inline-opening">
