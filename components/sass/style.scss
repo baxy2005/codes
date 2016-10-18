@@ -167,11 +167,14 @@ margin-bottom: 100px;
 }
 .btn.btn-overlay {
   color: $color-white;
-  background-color: $color-primary;
+  background-color: transparent;
   margin-top: 0px;
   margin-bottom: 0px;
+  &:hover {
+    background-color: $color-primary;
+  }
 }
-.btn.btn-overlay-2 {
+/*.btn.btn-overlay-2 {
   color: $color-white;
   background-color: transparent;
   &:hover {
@@ -186,7 +189,7 @@ margin-bottom: 100px;
     background-color: transparent;
   }
 }
-
+*/
 .btn.btn-more-info {
   color: $color-black;
   border: 2px solid $color-black;
@@ -434,6 +437,10 @@ margin-bottom: 100px;
     	.col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     		padding-left: 0px;
     		padding-right: 0px;
+        min-height: 0px;
+        @media (min-width: 768px) {
+        min-height: 1px;
+      }
     	}
     }
 
@@ -528,7 +535,14 @@ opening project gallery
   }
 }
 
-
+.project-gallery, .product, .services, .magazine, {
+  .img-responsive {
+    width: 100%;
+    @media (min-width: 1280px) {
+    height: 238px;
+ }
+}
+   }
 .project-gallery, .product, .services, .company, .magazine, {
 	h1 {
 		margin-bottom: 20px;
@@ -792,6 +806,14 @@ opening product gallery
 -webkit-transform:scale(1);
 transform:scale(1);
 }
+.col-xs-12:last-child {
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+
+}
+
 }
 /*-------------------------------------------
 opening magazine
@@ -880,6 +902,46 @@ opening magazine
       height: 237.5px;
       }
   }
+  .col-xs-12:last-child {
+    margin-top: 30px;
+    @media (min-width: 768px) {
+      margin-top: 0px;
+    }
+  }
+}
+/* flex order tiles */
+.magazine {
+.box-flex {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  .hovereffect.hovereffect-triangle::before {
+    bottom: -10px;
+    top: auto;
+    @media screen and (min-width: 768px) {
+      top: -10px;
+      bottom: auto;
+    }
+  }
+  .hovereffect {
+    height: auto;
+    width: auto;
+  }
+}
+.magazine-box {
+  order: 2;
+  @media screen and (min-width: 768px) {
+    order: 1;
+  }
+  .hovereffect {
+    order: 1;
+    @media screen and (min-width: 768px) {
+      order: 2;
+    }
+  }
+}
 }
 /*-------------------------------------------
 opening reach out
@@ -957,6 +1019,10 @@ opening contact
   }
   .btn-overlay {
     width:  100%;
+    background-color: $color-primary;
+  }
+  .form-control {
+    background-color: transparent;
   }
 }
 .contact, .social-opening {
@@ -997,22 +1063,32 @@ opening contact
   background-color: $color-secondary;
 }
 .yellow-box-4{
-  width: 31.5%;
+  width: 100%;
   height: 100%;
   bottom: 0px;
   left: 0px;
+    @media (min-width: 768px) {
+      width: 31.5%;
+    }
 }
 .yellow-box-3{
-  width: 76.2%;
+  width: 100%;
  height: 100%;
   top: 0px;
   left: 0px;
+  @media (min-width: 768px) {
+    width: 76.2%;
+}
 }
 .yellow-box-2{
   width: 960px;
-  height: 100%;
+  height: 98%;
   top: 0px;
   right: 0px;
+  @media (min-width: 768px) {
+    height: 100%;
+}
+
 }
 .yellow-box-1{
   width: 100%;
