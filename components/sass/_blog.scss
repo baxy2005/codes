@@ -57,7 +57,55 @@ blog
     top: auto;
   }
 }
-
+.Page .navigation{
+  text-align: center;
+}
+.yellow-bg {
+background-color: $color-secondary;
+}
+.pagination {
+  margin-bottom: 75px;
+  margin-top: 75px;
+  @include centerCenter(row, center, center);
+  li > a{
+    padding: 0;
+    color: $color-black;
+    border: none;
+    margin-left: -1px;
+    margin: 0 11px;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+  }
+  .active > a, li > a:hover, .active > a:hover  {
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 100px;
+  }
+  li:first-child > a, li:last-child > a {
+    height: 56px;
+    width: 36px;
+    background-repeat: no-repeat;
+    background-size: 158px 306px;
+    border: none;
+    border-radius: 0;
+  }
+    li:first-child > a:hover, li:last-child > a:hover {
+      background-color: transparent;
+      height: 56px;
+      width: 36px;
+      border: none;
+    }
+  li:first-child > a {
+    background-image: url(../images/code-spritesheet.svg);
+    background-position: -48px -8px;
+  }
+  li:last-child > a {
+    background-image: url(../images/code-spritesheet.svg);
+    background-position: -100px -8px;
+  }
+}
 .blog-hover-one {
   margin-bottom: 76px;
   .hover-content {
@@ -220,6 +268,7 @@ blog article
     font-family:$font-primary-book;
     line-height: 32px;
     font-size: 16px;
+    text-align: left;
   }
   h4 {
     font-size: 16px;

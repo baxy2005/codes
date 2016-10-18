@@ -6,6 +6,8 @@ $('.owl-carousel-main').owlCarousel({
     nav:false,
     items: 1,
     autoplay: true,
+    autoplayTimeout: 8000,
+    autoplayHoverPause: false,
     navText: [
       "<i class='main-carusel-left'></i>",
       "<i class='main-carusel-right'></i>"
@@ -188,3 +190,13 @@ $(document).ready(function () {
 $('[data-toggle="product-item"]').click(function () {
   $('.product-item-info').toggleClass('active')
 });
+
+//window height
+var wheight = $(window).height(); //get height of the window
+
+$('.fullheight').css('height', wheight);
+
+$(window).resize(function() {
+  var wheight = $(window).height(); //get height of the window
+  $('.fullheight').css('height', wheight);
+}) //on resize

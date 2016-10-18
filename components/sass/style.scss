@@ -235,6 +235,14 @@ margin-bottom: 100px;
   top: 18px;
   right: 18px;
   z-index: 55;
+    @media (min-width: 1280px) {
+      left: 905px;
+    }
+}
+.btn-gallery-2 {
+  @media (min-width: 1280px) {
+    left: 605px !important;
+  }
 }
 .btn.btn-back.btn-back-light {
   border: 2px solid $color-secondary;
@@ -279,15 +287,21 @@ margin-bottom: 100px;
   width: 170px;
   min-width: 170px;
   color: $color-white;
-
 }
 .btn-back:hover  {
+  background-image: url(../images/code-spritesheet.svg);
+  background-position: -4px 2px;
+  @media (min-width: 768px) {
   width: 168px;
   transition: .25s ease-in-out .1s;
+}
 }
 
 .btn.btn-back.btn-back-light:hover .btn-text-hidden {
   color: $color-black;
+}
+.btn-light-no {
+  width: 35px !important;
 }
 
 .btn.btn-order {
@@ -295,7 +309,50 @@ margin-bottom: 100px;
   color: $color-secondary;
   border: $color-black;
 }
+.btn-overlay-project-gallery {
+    @media (min-width: 768px) {
+      text-transform: capitalize;
+      display: inline-block;
+      color: #fff;
+      border: none;
+      background-color: transparent !important;
+      @include linkSmall;
+      margin: 15px 0;
+      border: none;
+      -webkit-transition:all .2s ease-in-out;
+      transition:all .2s ease-in-out;
+      &:hover {
+      border: none;
 
+      }
+    }
+}
+.btn-overlay-magazine {
+  text-transform: uppercase;
+  display: block;
+  @extend .btn;
+  @extend .btn-default;
+  font-style: normal;
+  padding: 6px 12px;
+  text-align: center;
+  width: 217px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+  text-transform: capitalize;
+  margin-left: 0px;
+  min-width: 0px;
+  padding: 0;
+  margin: 0 !important;
+  margin-top: -10px !important;;
+  margin-left: 20px !important;
+  width: auto;
+  font-style: italic;
+  text-align: left;
+  &:hover {
+  color: $color-white;
+  }
+}
+}
 
 .form-group {
     margin-bottom: 10px;
@@ -438,8 +495,39 @@ input:checked + .btn-selector {
 }
 
 /*-------------------------------------------
+ mobile opening image
+-------------------------------------------*/
+
+.fullheight {
+background: url("../images/code-main-carousel-01.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+.scroll {
+  bottom:20px;
+}
+}
+.form-info-opening {
+  .btn-carousel {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  }
+}
+/*-------------------------------------------
 opening project gallery
 -------------------------------------------*/
+.project-gallery, .company, .reach-out {
+  p {
+    width: 80%;
+  }
+}
+ .product, .services {
+  p {
+    width: 90%;
+  }
+}
+
 
 .project-gallery, .product, .services, .company, .magazine, {
 	h1 {
@@ -1077,6 +1165,14 @@ alterier events
 }
 .image-bg.image-bg-atelier-events{
     background-image: url(../images/atelier/code-atelier-private-events-01.jpg);
+
+}
+/*-------------------------------------------
+subpage
+-------------------------------------------*/
+.image-bg.image-bg-subpage {
+  background-image: url(../images/brand-subpage/code-brand-subpage-01.jpg);
+  filter: none;
 
 }
 /*-------------------------------------------

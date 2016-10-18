@@ -201,6 +201,20 @@ leading story
 /*-------------------------------------------
 articles
 -------------------------------------------*/
+/*.articles-select {
+.hovereffect  a {
+position: absolute;
+display: flex;
+width: 100%;
+height: 100%;
+cursor: pointer;
+z-index: 5;
+top: 0;
+left: 0;
+align-items: center;
+}
+}
+*/
 .articles-select {
   .hovereffect .overlay {
     background-color: rgba(0,0,0,0.0);
@@ -215,17 +229,6 @@ articles
       position: relative;
       bottom: auto;
     }
-  }
-  .hovereffect a {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 5;
-  top: 0;
-  left: 0;
-  align-items: center;
   }
   .hovereffect a.info {
     top: auto;
@@ -449,7 +452,7 @@ position: relative;
     margin-top: 0px;
     margin-bottom: 0px;
   }
-  .info {
+  /*.info {
     @extend .btn;
     @extend .btn-default;
     font-style: normal;
@@ -457,7 +460,7 @@ position: relative;
     text-align: center;
     width: 217px;
     margin: 0 auto;
-  }
+  }*/
   @media (min-width: 768px) {
   position: absolute;
   background-color:rgba(0,0,0,0.6);
@@ -469,7 +472,7 @@ position: relative;
     margin-left: 20px;
     margin-bottom: 15px
   }
-  .info {
+  /*.info {
     margin-left: 20px !important;
     padding: 0 !important;
     display: inline !important;
@@ -486,7 +489,7 @@ position: relative;
     &:hover {
       background-color: transparent !important;
     }
-}
+}*/
 }
 }
 
@@ -540,6 +543,9 @@ magazine article
 -------------------------------------------*/
 .leading-magazine-story {
   margin-bottom: 96px;
+  .row:first-child {
+    height: 100%;
+  }
   .social-icons-transparent {
     position: absolute;
     bottom: 20px;
@@ -617,6 +623,14 @@ magazine article
       line-height: 120%;
       width: 80%;
       padding: 15px 0 0 15px;
+      @media (min-width: 980px) {
+        padding: 15px 0 0 15px;
+       }
+
+      @media (min-width: 1280px) {
+        padding: 10px 0 0 20px;
+       }
+
     }
   }
   p {
@@ -662,14 +676,24 @@ magazine article
     width: 50%;
   }
 }
+.left-1 {
+margin-left: 20px;
+}
+
+.left-2  {
+  margin-left: 75px;
+}
 .magazine-article-picture, .magazine-article-picture-left, .atelier-article-picture {
-  height: 600px;
   background-color: $color-secondary;
-  background-image: url(../images/magazine-page/magazine-article/code-magazine-magazine-article-03.jpg);
-  background-repeat: no-repeat;
-  background-position: right;
   margin-top: 100px;
   margin-bottom: 95px;
+  img {
+    width: 100%;
+
+     @media (min-width: 1280px) {
+       width: auto;
+      }
+  }
   .caption {
     padding: 0 !important;
     padding-top: 20px;
@@ -686,8 +710,6 @@ background-image: url(../images/atelier/social/code-atelier-atelier-social-03.jp
 
 }
 .magazine-article-picture-left {
-  background-position: left;
-  background-image: url(../images/magazine-page/magazine-article/code-magazine-magazine-article-04.jpg);
   p {
     width: 100%;
     padding-left: 25px;
@@ -708,4 +730,7 @@ background-image: url(../images/atelier/social/code-atelier-atelier-social-03.jp
     width: 40px;
     height: 40px;
   }
+}
+.widget-story-bottom {
+  margin: 90px 0 100px 0 ;
 }
