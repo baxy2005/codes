@@ -188,7 +188,15 @@ $(document).ready(function () {
   });
 });
 $('[data-toggle="product-item"]').click(function () {
-  $('.product-item-info').toggleClass('active')
+  $('.overlay-click').toggleClass('product-active')
+});
+$('[data-toggle="product-item-2"]').click(function () {
+  $('.overlay-click-2').toggleClass('product-active')
+  $('.owl-nav').toggleClass('fade-off')
+
+});
+$('[data-toggle="product-item-3"]').click(function () {
+  $('.overlay-click-2').toggleClass('product-active-active')
 });
 
 //window height

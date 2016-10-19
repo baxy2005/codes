@@ -308,9 +308,12 @@ margin-bottom: 100px;
 }
 
 .btn.btn-order {
-  background-color: $color-black;
-  color: $color-secondary;
-  border: $color-black;
+  color: $color-black;
+  border: 2px solid $color-black;
+  &:hover {
+    background-color: $color-black;
+    color: $color-secondary;
+  }
 }
 .btn-overlay-project-gallery {
     @media (min-width: 768px) {
@@ -428,8 +431,8 @@ margin-bottom: 100px;
       background-color: transparent;
     }
 
-    .project-gallery, .product, .services, .company, .magazine, .articles, .reach-out, .contact, .social-opening, .contact-page, footer, .one-product, .blog, .magazine-article-text {
-      .row	 {
+  /*  .project-gallery, .product, .services, .company, .magazine, .articles, .reach-out, .contact, .social-opening, .contact-page, footer, .one-product, .blog, .magazine-article-text {
+    */  .row	 {
     		margin-left: 0px;
     		margin-right: 0px;
     	}
@@ -442,7 +445,8 @@ margin-bottom: 100px;
         min-height: 1px;
       }
     	}
-    }
+  /*}*/
+  
 
 
 /*selectors*/
@@ -629,11 +633,9 @@ opening product gallery
      margin-top: 30px;
      }
  }
- .product {
-.product-item-container input:checked + .product-item-button {
-  background-color: $color-primary !important;
 
-}
+
+ .product, .one-product-selected  {
    .product-item-container {
      position: absolute;
       bottom: 0;
@@ -641,29 +643,29 @@ opening product gallery
       left: 35%;
       display: flex;
       z-index: 55;
-      .product-item-input {
-        display: none;
-      }
       .product-item-button {
         width: 20px;
         height: 20px;
-        background-color: rgba(0,0,0,0.2);
-        border: 2px solid #f4633a;
+        background-color: $color-primary;
         color: #fff;
         cursor: pointer;
-        font-family: $font-primary-medium;
-        font-size: 20px;
+        font-family: $font-primary;
+        font-size: 26px;
         line-height: 16px;
         text-align: center;
         text-transform: uppercase;
         font-size: 11px;
         margin-right: 2px;
+        background-image:url(../images/code-spritesheet.svg);
+        background-repeat: no-repeat;
+        background-position: -96px -201px;
+
       }
-      .product-item-input:checked + .product-item-button span::after {
+    /*  .product-item-input:checked + .product-item-button span::after {
     content: "x";
       }
       .product-item-button span::after {
-          content: "C";
+          content: "+";
       }
 
       .product-item-text {
@@ -730,7 +732,7 @@ opening product gallery
           left: 0;
           z-index: 1;
          }
-      }
+      }*/
    }
  }
 
@@ -927,7 +929,7 @@ opening magazine
   }
   .hovereffect {
     height: auto;
-    width: auto;
+    width: 100%;
   }
 }
 .magazine-box {
@@ -1112,7 +1114,7 @@ contact page
   }
 }
 
-.contact-page {
+.contact-page, .contact-page-product {
   margin-top: 97px;
   margin-bottom: 90px;
   @media (min-width: 768px) {
@@ -1216,7 +1218,33 @@ margin-bottom: 0
     }
 
 }
+}
 
+.overlay-click-3.contact-page-product {
+  margin-top: 0;
+  margin-bottom: 0;
+  .col-xs-12:nth-of-type(1){
+      display: inherit;
+      width: 100%;
+      .form-group {
+        width: 48.8%;
+      }
+  }
+  .col-xs-12:nth-of-type(2) {
+    display: inherit;
+    background-color: transparent;
+  }
+  .btn-order {
+    margin-top: 20px;
+    background-color: transparent;
+    float: right;
+    &:hover {
+      background-color: $color-black;
+    }
+  }
+  form {
+    padding: 42px 24px 24px 24px;
+  }
 }
 .image-bg.image-bg-donwload {
     background-image: url(../images/download/code-downloads-01.jpg);
