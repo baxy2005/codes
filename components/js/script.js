@@ -198,6 +198,13 @@ $('[data-toggle="product-item-2"]').click(function () {
 $('[data-toggle="product-item-3"]').click(function () {
   $('.overlay-click-2').toggleClass('product-active-active')
 });
+$('[data-toggle="product-item-4"]').click(function () {
+  $('.overlay-click-3').toggleClass('overlay-click-3-slide')
+});
+
+$('.slider-click').click(function () {
+  $('.slider-wrap').toggleClass('slider-wrap-open')
+});
 
 //window height
 var wheight = $(window).height(); //get height of the window
@@ -208,3 +215,16 @@ $(window).resize(function() {
   var wheight = $(window).height(); //get height of the window
   $('.fullheight').css('height', wheight);
 }) //on resize
+
+
+$(document).ready(function() {
+  var contentLastMarginLeft = 0;
+  $(".slider-click").click(function() {
+    var box = $(".slider-content");
+    var newValue = contentLastMarginLeft;
+    contentLastMarginLeft = box.css("margin-left");
+    box.animate({
+      "margin-left": newValue
+    }, 500);
+  });
+});

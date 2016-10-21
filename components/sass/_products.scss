@@ -257,8 +257,15 @@ one product
     display: none;
   }
   .btn-light-no {
+    @media (min-width: 768px) {
+      left: -320px !important;
+      display: block !important;
+
+    }
+    @media (min-width: 1200px) {
   left: -380px !important;
   display: block !important;
+   }
   }
 }
   .one-product-opening, .one-product-selected {

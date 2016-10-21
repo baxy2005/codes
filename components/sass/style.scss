@@ -141,7 +141,7 @@ margin-bottom: 100px;
 .btn-default {
   background-color: transparent;
 }
-.btn-default:hover {
+.btn-default:hover, .btn-default:focus, .btn-default:active {
 	background-color: $color-primary;
 	color: $color-white;
 	border: 2px solid $color-primary;
@@ -221,6 +221,18 @@ margin-bottom: 100px;
   color: $color-primary;
   background-color: $color-primary;
   border: 2px solid $color-primary;
+}
+.btn.btn-close {
+@extend .btn.btn-scroll;
+background-color: transparent;
+background-position: -2px -237px !important;
+-moz-transition: background-color .2s ease-in;
+-o-transition: background-color .2s ease-in;
+-webkit-transition: background-color .2s ease-in;
+transition: background-color .2s ease-in;
+&:hover {
+  background-position: -2px -203px !important;
+}
 }
 .btn.btn-back {
   @extend .btn.btn-scroll;
@@ -446,7 +458,7 @@ margin-bottom: 100px;
       }
     	}
   /*}*/
-  
+
 
 
 /*selectors*/
@@ -1060,7 +1072,7 @@ opening contact
 }
 
 .yellow-box {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   background-color: $color-secondary;
 }
@@ -1481,7 +1493,7 @@ offcanvas
 
     .sidebar-offcanvas {
       position: absolute;
-      top: 0xpx;
+      top: 0px;
       width: 100%; /* 6 columns */
     }
   }

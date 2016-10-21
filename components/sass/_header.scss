@@ -131,7 +131,14 @@ transform:translatey(0);
 
 .hovereffect:hover a.info {
 }
-
+.hovereffect .overlay h4 {
+  font-size: 16px;
+  color: #fff;
+  font-family: $font-primary-medium;
+  margin-bottom: 30px;
+  padding: 0 45px;
+  line-height: 140%;
+}
 /*
 ---------------------------------------------------------
 navbar styles

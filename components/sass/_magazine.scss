@@ -143,7 +143,7 @@ leading story
            }
         }
      }
-     .btn.btn-back {
+     .btn.btn-back, .btn.btn-close  {
         bottom: 25px;
         z-index: 55;
         left: 0;
@@ -151,6 +151,9 @@ leading story
         margin: 0 auto;
         top: auto;
         background-position: -24px -104px;
+     }
+     .btn.btn-close  {
+       position: absolute;
      }
      .btn-selector {
        height: 25px;
