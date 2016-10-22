@@ -22,4 +22,67 @@
   @media (min-width: 768px) {
     margin-top:  30px;
   }
+  .hovereffect {
+    cursor: pointer;
+  }
+  .hovereffect-mobile .overlay {
+    padding: 20px;
+    height: 200px;
+    display: block;
+    @media screen and (min-width: 768px) {
+      height: 100%;
+      padding: 0;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    p {
+      margin: 0px;
+      line-height: 17.5px;
+      @media screen and (min-width: 768px) {
+      margin-left: 20px;
+      margin-bottom: 15px;
+      margin-top: 60px;
+      line-height: 1.42857143;
+      }
+    }
+  h4 {
+    font-size: 20px;
+    font-family: $font-primary;
+    margin-bottom: 8px;
+    position: relative;
+    text-align: left;
+    left: auto;
+    top: auto;
+    color: $color-black;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      font-family: $font-primary-medium;
+      margin-bottom: 30px;
+      padding: 0 45px;
+      line-height: 140%;
+      color: $color-white;
+      text-align: center;
+    }
+  }
+  .btn-overlay {
+    color: $color-primary;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 217px;
+    position: absolute;
+    &:hover {
+      color: $color-white;
+    }
+    @media screen and (min-width: 768px) {
+      position: relative;
+      color: $color-white;
+    }
+  }
+  }
+
 }

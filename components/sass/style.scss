@@ -234,6 +234,14 @@ transition: background-color .2s ease-in;
   background-position: -2px -203px !important;
 }
 }
+.btn.btn-close-white {
+  @extend .btn.btn-scroll;
+  background-image: url(../images/code-close-white-bg.svg);
+  border: 2px solid $color-white !important;
+  background-position: -2px -203px !important;
+  background-color: transparent;
+  text-indent: -3000px;
+}
 .btn.btn-back {
   @extend .btn.btn-scroll;
   background-color: transparent;
@@ -542,12 +550,18 @@ opening project gallery
 -------------------------------------------*/
 .project-gallery, .company, .reach-out {
   p {
+    width: 100%;
+    @media (min-width: 768px) {
     width: 80%;
+    }
   }
 }
  .product, .services {
   p {
+    width: 100%;
+    @media (min-width: 768px) {
     width: 90%;
+    }
   }
 }
 
@@ -1271,7 +1285,11 @@ alterier events
   p {
     font-family: $font-primary-book;
     text-align: center;
+    margin: 0 4%;
+      @media (min-width: 768px) {
     margin: 0 25%;
+
+     }
   }
   .btn-default:nth-of-type(2) {
     position: absolute;
@@ -1294,6 +1312,7 @@ subpage
 /*-------------------------------------------
 alterier
 -------------------------------------------*/
+
 .atelier {
   margin-top: 0px;
   margin-bottom: 25px;
@@ -1676,3 +1695,92 @@ order: -1;
     flex-shrink: 2;
   }
 }
+/*-------------------------------------------
+search
+-------------------------------------------*/
+.leading-story-search {
+background-color: $color-white;
+height: 150px !important;
+h1 {
+    color: #282828;
+}
+}
+.panel-body {
+  padding: 0px;
+}
+.panel {
+  box-shadow: none;
+  border: 2px solid $color-primary;
+  width: 85%;
+}
+.panel-title {
+  color: $color-primary;
+  font-family: $font-primary-book;
+  text-align: center;
+}
+.panel-group .panel {
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+.panel-group  {
+  margin-bottom: 40px;
+}
+.panel-default > .panel-heading {
+  background-color: $color-white;
+}
+.panel-heading {
+  height: 40px;
+  padding: 0px;
+}
+.panel-title, .panel-title a {
+  height: 100%;
+  width: 100%;
+  @include centerCenter (row, center, center);
+  font-family: $font-primary-book;
+
+}
+.product-search {
+  .btn-order {
+    width: 85% ;
+  }
+  small {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+.product-search-big {
+  margin-bottom: 70px;
+
+  .panel-group .panel, .panel-group  {
+    margin-bottom: 0px;
+  }
+}
+.search-items {
+label {
+  display: block;
+  color: $color-black;
+  cursor: pointer;
+  font-family: $font-primary-book;
+  font-size: 16px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  transition: background-color .3s ease;
+  margin-bottom: 0px;
+  text-align: center;
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+input:checked + label {
+  background-color: $color-secondary;
+  background-image: url(../images/code-small-close.svg);
+  background-position: 95% center;
+  background-repeat: no-repeat;
+
+}
+input {
+  display: none;
+}
+ }

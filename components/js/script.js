@@ -185,6 +185,7 @@ $(document).ready(function () {
   $('[data-toggle="offcanvas-2"]').click(function () {
     $('.row-offcanvas').toggleClass('active')
     $('.container-fluid.yellow-atelier').toggleClass('atelier-margin-top')
+    $('.btn-login').toggleClass('btn-close-white')
   });
 });
 $('[data-toggle="product-item"]').click(function () {

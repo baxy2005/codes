@@ -147,43 +147,49 @@
 <div class="container-fluid leading-story leading-story-products leading-story-blog  on-off">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <button type="button" class="btn btn-default btn-back"><span class="btn-text-hidden"><span>back to home</span> </span></button>
-          <h1><span>Blog</span></h1>
-          <div class="selectors-container">
-            <ul class="nav selectors">
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" checked value="all" id="references-filter-1">
-                  <label for="references-filter-1" class="btn-selector btn-selector-close"><span>All subjects</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="houses" id="references-filter-2">
-                  <label for="references-filter-2" class="btn-selector btn-selector-close"><span>EVENTS</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-3">
-                  <label for="references-filter-3" class="btn-selector btn-selector-close"><span>LIFESTYLE</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-4">
-                  <label for="references-filter-4" class="btn-selector btn-selector-close"><span>IMAGES</span></label>
-                </div><!--selectors-container-->
-              </li>
-              <li>
-                <div class="selector-container">
-                  <input type="checkbox" name="filter-reference" value="flats" id="references-filter-5">
-                  <label for="references-filter-5" class="btn-selector btn-selector-close"><span>archive</span></label>
-                </div><!--selectors-container-->
-              </li>
-            </ul>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="row row-offcanvas row-offcanvas-right">
+            <div class="selectors-container sidebar-offcanvas">
+              <ul class="nav selectors">
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" checked value="all" id="references-filter-1">
+                    <label for="references-filter-1" class="btn-selector btn-selector-close"><span>All subjects</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="houses" id="references-filter-2">
+                    <label for="references-filter-2" class="btn-selector btn-selector-close"><span>EVENTS</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-3">
+                    <label for="references-filter-3" class="btn-selector btn-selector-close"><span>LIFESTYLE</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-4">
+                    <label for="references-filter-4" class="btn-selector btn-selector-close"><span>IMAGES</span></label>
+                  </div><!--selectors-container-->
+                </li>
+                <li>
+                  <div class="selector-container">
+                    <input type="checkbox" name="filter-reference" value="flats" id="references-filter-5">
+                    <label for="references-filter-5" class="btn-selector btn-selector-close"><span>archive</span></label>
+                  </div><!--selectors-container-->
+                </li>
+              </ul>
+              <button type="button" class="btn btn-close visible-xs" data-toggle="offcanvas-2"></button>
+            </div>
           </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <button type="button" class="btn btn-default btn-back hidden-xs"><span class="btn-text-hidden"> <span>back to home</span> </span></button>
+          <h1><span>Blog</span></h1>
+          <button type="button" class="btn btn-default btn-filter visible-xs" data-toggle="offcanvas-2">filters</button>
         </div>
       </div><!--row-->
     </div>
@@ -191,15 +197,17 @@
 <div class="container-fluid yellow-blog-1">
   <div class="container top-carousel-container blog-hover-one">
     <div class="row">
-      <div class="col-lg-8 col-md-8 c col-sm-8 col-xs-12">
-        <div class="hovereffect-2">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <div class="hovereffect-3">
           <div class="hover-content">
-            <img src="images/blog/code-blog-01.jpg" alt="">
+            <div class="image-container">
+              <img src="images/blog/code-blog-01.jpg" alt="">
+            </div>
             <div class="overlay-2">
               <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-              <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat ex.</p>
+              <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat.</p>
               <button type="button" class="btn btn-default btn-carousel">learn more</button>
-              <ul class="nav social-icons">
+              <ul class="nav social-icons hidden-xs">
                 <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
                 <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
@@ -216,29 +224,27 @@
   </div>
 </div> <!--container fluid -->
 <div class="container-fluid yellow-blog-2">
-  <div class="container top-carousel-container blog-hover-two">
+  <div class="container top-carousel-container blog-hover-one">
     <div class="row">
-      <div class="col-lg-12 col-md-12 c col-sm-12 col-xs-12">
-        <div class="hovereffect">
-          <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-12">
-            <img src="images/blog/code-blog-02.jpg" alt="">
-          </div>
-            <div class="overlay">
-              <div class="overlay-left">
-              </div>
-              <div class="overlay-right">
-                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat ex.</p>
-                <button type="button" class="btn btn-default btn-carousel">learn more</button>
-                <ul class="nav social-icons social-icons-transparent">
-                  <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-                </ul>
-              </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-12">
+        <div class="hovereffect-3">
+          <div class="hover-content">
+            <div class="image-container">
+              <img src="images/blog/code-blog-02.jpg" alt="">
             </div>
+            <div class="overlay-2">
+              <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+              <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat.</p>
+              <button type="button" class="btn btn-default btn-carousel">learn more</button>
+              <ul class="nav social-icons hidden-xs">
+                <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li> <a href="#"><i class="fa fa-tumblr"></i></a></li>
+              </ul>
+            </div>
+          </div><!--hover-content -->
         </div><!--hoverefect -->
       </div>
     </div><!--row-->
@@ -247,95 +253,87 @@
   </div>
 </div> <!--container fluid -->
 <div class="container-fluid yellow-blog-3">
-  <div class="container top-carousel-container blog-hover-two">
+  <div class="container top-carousel-container blog-hover-one">
     <div class="row">
-      <div class="col-lg-12 col-md-12 c col-sm-12 col-xs-12">
-        <div class="hovereffect">
-          <div class="col-lg-11 col-md-11 col-sm-11 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-12">
-            <img src="images/blog/code-blog-03.jpg" alt="">
-          </div>
-            <div class="overlay">
-              <div class="overlay-left">
-              </div>
-              <div class="overlay-right">
-                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat ex.</p>
-                <button type="button" class="btn btn-default btn-carousel">learn more</button>
-                <ul class="nav social-icons social-icons-transparent">
-                  <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-                </ul>
-              </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-12">
+        <div class="hovereffect-3">
+          <div class="hover-content">
+            <div class="image-container">
+              <img src="images/blog/code-blog-03.jpg" alt="">
             </div>
+            <div class="overlay-2">
+              <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+              <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat.</p>
+              <button type="button" class="btn btn-default btn-carousel">learn more</button>
+              <ul class="nav social-icons hidden-xs">
+                <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li> <a href="#"><i class="fa fa-tumblr"></i></a></li>
+              </ul>
+            </div>
+          </div><!--hover-content -->
         </div><!--hoverefect -->
       </div>
     </div><!--row-->
   </div><!--blog hover one -->
   <div class="yellow-box yellow-box-1">
-  </div>
-  <div class="yellow-box yellow-box-2">
   </div>
 </div> <!--container fluid -->
 <div class="container-fluid yellow-blog-4">
-  <div class="container top-carousel-container blog-hover-two">
+  <div class="container top-carousel-container blog-hover-one">
     <div class="row">
-      <div class="col-lg-12 col-md-12 c col-sm-12 col-xs-12">
-        <div class="hovereffect">
-          <div class="col-lg-11 col-md-11 col-sm-11 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-12">
-            <img src="images/blog/code-blog-04.jpg" alt="">
-          </div>
-            <div class="overlay">
-              <div class="overlay-left">
-              </div>
-              <div class="overlay-right">
-                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat ex.</p>
-                <button type="button" class="btn btn-default btn-carousel">learn more</button>
-                <ul class="nav social-icons social-icons-transparent">
-                  <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-                </ul>
-              </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-12">
+        <div class="hovereffect-3">
+          <div class="hover-content">
+            <div class="image-container">
+              <img src="images/blog/code-blog-04.jpg" alt="">
             </div>
+            <div class="overlay-2">
+              <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+              <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat.</p>
+              <button type="button" class="btn btn-default btn-carousel">learn more</button>
+              <ul class="nav social-icons hidden-xs">
+                <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li> <a href="#"><i class="fa fa-tumblr"></i></a></li>
+              </ul>
+            </div>
+          </div><!--hover-content -->
         </div><!--hoverefect -->
       </div>
     </div><!--row-->
   </div><!--blog hover one -->
   <div class="yellow-box yellow-box-1">
   </div>
-  <div class="yellow-box yellow-box-2">
-  </div>
 </div> <!--container fluid -->
 <div class="container-fluid yellow-blog-5">
-  <div class="container top-carousel-container blog-hover-two">
+  <div class="container top-carousel-container blog-hover-one">
     <div class="row">
-      <div class="col-lg-12 col-md-12 c col-sm-12 col-xs-12">
-        <div class="hovereffect">
-          <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-12">
-            <img src="images/blog/code-blog-05.jpg" alt="">
-          </div>
-            <div class="overlay">
-              <div class="overlay-left">
-              </div>
-              <div class="overlay-right">
-                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat ex.</p>
-                <button type="button" class="btn btn-default btn-carousel">learn more</button>
-                <ul class="nav social-icons social-icons-transparent">
-                  <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                  <li> <a href="#"><i class="fa fa-tumblr-square"></i></a></li>
-                </ul>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-12">
+        <div class="hovereffect-3">
+          <div class="hover-content">
+            <div class="image-container">
+              <div class="image-container">
+                <img src="images/blog/code-blog-05.jpg" alt="">
               </div>
             </div>
+            <div class="overlay-2">
+              <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+              <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras elit metus, semper et urna et, tempus placerat.</p>
+              <button type="button" class="btn btn-default btn-carousel">learn more</button>
+              <ul class="nav social-icons hidden-xs">
+                <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li> <a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li> <a href="#"><i class="fa fa-tumblr"></i></a></li>
+              </ul>
+            </div>
+          </div><!--hover-content -->
         </div><!--hoverefect -->
       </div>
     </div><!--row-->
@@ -370,7 +368,7 @@
 <div class="container-fluid">
   <div class="container reach-out">
     <div class="row">
-      <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-6 col-xs-12">
+      <div class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-6 col-xs-12 padding-mobile">
         <div class="info-block">
           <h1>REACH OUT</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proineuismod nulla a sapien fermentum rutrum eget luctus mauris.</p>
@@ -386,7 +384,7 @@
       </div><!--one box -->
     </div><!--row-->
   </div><!--reach-out -->
-  <div class="container contact">
+  <div class="container contact padding-mobile">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
         <h3>CONTACTS</h3>
@@ -412,7 +410,7 @@
       </div>
     </div>
   </div><!-- contact -->
-  <div class="container social-opening">
+  <div class="container social-opening hidden-xs">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-6 col-xs-12">
       <ul class="nav social-icons">

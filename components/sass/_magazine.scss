@@ -3,6 +3,48 @@
 /*-------------------------------------------
 leading story
 -------------------------------------------*/
+.container-fluid.load-more  {
+  background-color: $color-secondary;
+  .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    }
+  }
+}
+.magazne-yellowbox {
+  .yellow-box-1 {
+    height: 240px;
+    width: 100%;
+    right: 0;
+    @media (min-width: 768px) {
+      height: 100%;
+      width: 160px;
+      right: 0;
+      }
+  }
+  .yellow-box-2 {
+    height: 100%;
+    width: 100%;
+    right: 0;
+    @media (min-width: 768px) {
+      height: 100%;
+      width: 160px;
+      right: 0;
+      }
+  }
+
+}
+.articles-select-lead {
+  @media (min-width: 768px) {
+  p {
+    padding: 0 20px;
+  }
+  }
+}
 .leading-story::before {
   @include triangleUp;
   left: 0;
@@ -80,14 +122,16 @@ leading story
     margin-top:  50px;
     margin-bottom: 50px;
     font-family: $font-primary-book;
-    font-size: 50px;
+    font-size: 35px;
     span:nth-of-type(1) {
       font-family: $font-primary-bold;
     }
     span:nth-of-type(2) {
       font-family: $font-secondary;
     }
-
+    @media (min-width: 768px) {
+      font-size: 50px;
+      }
   }
   h3, p {
     color: $color-white;
@@ -268,6 +312,9 @@ align-items: center;
     p, h3 {
       text-align: left;
     }
+    .btn-default {
+      margin-bottom: 30px;
+    }
     @media (min-width: 768px) {
       padding-top: 0px;
       position: absolute;
@@ -288,6 +335,7 @@ align-items: center;
       }
       .btn-default {
         color: $color-white;
+        margin-bottom: 0;
       }
       .selectors-container {
         height: 18px;
@@ -321,7 +369,6 @@ align-items: center;
   	font-style: italic;
     @include centerCenter (row, center, center);
     margin-bottom: 35px;
-    margin-top: 25px;
     @media (min-width: 768px) {
     margin-top: 0px;
     margin-bottom: 65px;

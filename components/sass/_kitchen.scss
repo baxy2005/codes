@@ -142,10 +142,18 @@ kitchen selected
       font-size: 20px;
       margin-top: 60px;
     }
+    form {
+      background-color: $color-secondary;
+      .form-control {
+        background-color: transparent;
+      }
+    }
+
   }
   .overlay-click-3.contact-page-product .btn-light-close {
     position: relative;
     margin-top: -60px;
+    margin-left: -10px;
     }
   .row-offcanvas-right .hovereffect.hovereffect-triangle {
     margin-bottom: 50px;

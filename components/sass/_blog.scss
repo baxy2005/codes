@@ -64,8 +64,13 @@ blog
 background-color: $color-secondary;
 }
 .pagination {
-  margin-bottom: 75px;
-  margin-top: 75px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  @media (min-width: 768px) {
+    margin-bottom: 75px;
+    margin-top: 75px;
+
+  }
   @include centerCenter(row, center, center);
   li > a{
     padding: 0;
@@ -107,37 +112,150 @@ background-color: $color-secondary;
   }
 }
 .blog-hover-one {
-  margin-bottom: 76px;
+  margin-bottom: 0px;
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
   .hover-content {
     img {
       width: 100%;
       height: auto;
     }
   }
-  .hovereffect-2 .overlay-2 {
-      width: 50%;
-      left: 50%;
-      padding: 30px;
-      height: 100%;
+  .image-container {
+    position: relative;
+  }
+  .image-container:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background: #fff;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: 50%;
+    z-index: 15;
+    bottom: -10px;
+    top: auto;
+    left: -10px;
+    @media (min-width: 768px) {
+      display: none
+    }
+  }
+  .hovereffect-3 .overlay-2 {
+    position: relative;
+      overflow:hidden;
+      text-align: left;
+      -webkit-transition: -webkit-transform 0.35s;
+      transition: transform 0.35s;
+      height: 200px;
+      width: 100%;
+      padding: 20px;
+      @include centerCenter (column, flex-start, flex-start);
+      background-color: $color-white;
+      @media (min-width: 768px) {
+        position: absolute;
+        background: $color-primary;
+        color: $color-white;
+        top: 0;
+        padding: 40px;
+        height: 4.75em;
+        padding: 30px 30px 40px 30px;
+        width: 50%;
+        left: 50%;
+        overflow:hidden;
+        height: 100%;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+        @include centerCenter (column, flex-start, flex-end);
+
+ }
+      h3, p {
+        font-family: $font-primary;
+        @media (min-width: 768px) {
+        font-family: $font-primary-book;
+      }
+      }
       h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        line-height: 120%;
+        @media (min-width: 768px) {
         font-size: 18px;
         line-height: 1.33;
         text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      }
+      p {
+        font-size: 13px;
+        margin-bottom: 0px;
+        line-height: 17.5px;
+        @media (min-width: 768px) {
+        margin-bottom: 30px;
+        line-height: 20px;
+         }
+      }
+      .btn-carousel {
+        @include absoluteCenterBtn;
+        bottom: 20px;
+        border: 2px solid $color-primary;
+        background-color: transparent;
+        color: $color-primary;
+        &:hover {
+          color: $color-white;
+          background-color:$color-primary;
+        }
+        @media (min-width: 768px) {
+          position: relative;
+          bottom: auto;
+          margin-left: 0;
+          border: 2px solid $color-white;
+          color: $color-white;
+          &:hover {
+            color: $color-primary;
+            background-color:$color-white;
+          }
+
+         }
       }
   }
-  .hovereffect-2:hover .hover-content {
+  .hovereffect-3:hover .hover-content{
+    -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+
+    @media (min-width: 768px) {
   -webkit-transform: translate3d(-50%,0,0);
   	transform: translate3d(-50%,0,0);
-
+}
   }
+  .hovereffect-3 .hover-content {
+      display: block;
+      position: relative;
+  	-webkit-transition: -webkit-transform 0.35s;
+  	transition: transform 0.35s;
+  }
+
+
   .social-icons .fa {
     width: 40px;
     height: 40px;
     margin-right: 5px;
 
   }
+  .hovereffect-mobile {
+    .overlay-2 {
+      position: relative;
+      @media (min-width: 768px) {
+        position: absolute;
+      }
+    }
+  }
 }
-.blog-hover-two {
+/*.blog-hover-two {
   .hovereffect{
     .col-xs-12 {
       padding-left: 0;
@@ -212,7 +330,7 @@ background-color: $color-secondary;
 
   }
 
-}
+}*/
 
 /*-------------------------------------------
 blog article
@@ -275,19 +393,30 @@ blog article
     font-family: $font-primary-bold;
     margin-bottom: 35px;
   }
-  a {
+   a {
     text-decoration: underline;
   }
   .widget {
-    margin-top: 25px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    @include centerCenter (column, center ,space-between);
+    @media (min-width: 768px) {
+      @include centerCenter (row, center ,space-between);
+      margin-bottom: 50px;
+      margin-top: 25px;
+    }
     a {
       text-decoration: none;
+      order: 2;
+      margin-top: 20px;
+      @media (min-width: 768px) {
+        margin-top: 0;
+        order: 0;
+      }
     }
+  }
+  .hovereffect a {
+    text-decoration: none;
   }
 }
 .blog {
@@ -335,7 +464,7 @@ blog article
       justify-content: flex-end;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
         @media (min-width: 768px) {
             height: 300px;
             width: auto;
