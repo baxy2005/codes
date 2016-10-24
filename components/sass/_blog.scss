@@ -367,11 +367,19 @@ blog article
   blockquote {
     padding: 0;
     border-left: 0;
-    margin-bottom: 85px;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+      margin-bottom: 85px;
+    }
+
     p {
+      font-size: 32px;
+      line-height: 36px;
+      font-family: georgia;
+      @media (min-width: 768px) {
       font-size: 48px;
       line-height: 64px;
-      font-family: georgia;
+    }
     }
   }
   .social-icons .fa {

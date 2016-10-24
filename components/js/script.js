@@ -1,4 +1,155 @@
 // JavaScript Document
+// button anim
+$(document).ready(function () {
+			  $(".navbar-toggle").on("click", function () {
+				    $(this).toggleClass("active");
+			  });
+
+        // Init ScrollMagic Controller
+        scrollMagicController = new ScrollMagic({
+          globalSceneOptions: {
+            triggerHook: "onLeave"
+          }
+        });
+
+        var tween = new TimelineMax();
+
+             tween.add([
+              TweenMax.to(".on-off", 0.2, {marginTop:70 }),
+             TweenMax.to(".button-language-container", 0.3, {height:50}),
+             TweenMax.to(".button-language-container", 0.3, {marginTop: -50}),
+             TweenMax.to(".navbar", 0.3, {height:50}),
+             TweenMax.to(".brand-container", 0.3, {height:50 }),
+             TweenMax.to(".brand-image", 0.2, {width:100, height:35 }),
+             TweenMax.to(".navmenu-brand", 0.3, {width:100, height:22 }),
+
+
+
+           ]);
+           tween.add([
+           ]);
+
+           scene = new ScrollScene({
+             offset: 50
+
+        })
+        .setTween(tween)
+        .addTo(scrollMagicController);
+
+        var scene3 = new ScrollScene({
+          offset: 50
+
+        })
+        .setClassToggle('.icon-bar:nth-of-type(2)', 'icon-bar-2')
+        .addTo(scrollMagicController);
+
+
+
+// same box height
+$('.box').matchHeight();
+
+// region classes
+$(".mask-1").hover(function(){
+       $(".region-left").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-left").removeClass('region-open');
+    });
+
+$(".region-item:first-child .btn-default").hover(function(){
+       $(".region-left").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-left").removeClass('region-open');
+    });
+
+$(".mask-2").hover(function(){
+       $(".region-right").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-right").removeClass('region-open');
+    });
+
+$(".region-item:last-child .btn-default").hover(function(){
+       $(".region-right").addClass('region-open');
+       console.log("div was hovered");
+    }, function(){
+       $(".region-right").removeClass('region-open');
+    });
+// offcanvas
+$(document).ready(function () {
+  $('[data-toggle="offcanvas-2"]').click(function () {
+    $('.row-offcanvas').toggleClass('active')
+    $('.container-fluid.yellow-atelier').toggleClass('atelier-margin-top')
+    $('.btn-login').toggleClass('btn-close-white')
+  });
+});
+$('[data-toggle="product-item"]').click(function () {
+  $('.overlay-click').toggleClass('product-active')
+});
+$('[data-toggle="product-item-2"]').click(function () {
+  $('.overlay-click-2').toggleClass('product-active')
+  $('.owl-nav').toggleClass('fade-off')
+
+});
+$('[data-toggle="product-item-3"]').click(function () {
+  $('.overlay-click-2').toggleClass('product-active-active')
+});
+$('[data-toggle="product-item-4"]').click(function () {
+  $('.overlay-click-3').toggleClass('overlay-click-3-slide')
+});
+
+$('.slider-click').click(function () {
+  $('.slider-wrap').toggleClass('slider-wrap-open')
+});
+$('.panel-title').click(function () {
+  $(this).toggleClass('panel-title-active')
+});
+
+/*
+$(function() {
+  $('.panel-title').click(function() {
+    if ($(this).hasClass('panel-title-active')) {
+      $(this).removeClass('panel-title-active');
+    } else {
+      $('.panel-title').removeClass('panel-title-active');
+      $(this).addClass('panel-title-active');
+    }
+  });
+});*/
+
+//window height
+var wheight = $(window).height(); //get height of the window
+
+$('.fullheight').css('height', wheight);
+
+$(window).resize(function() {
+  var wheight = $(window).height(); //get height of the window
+  $('.fullheight').css('height', wheight);
+}) //on resize
+
+
+$(document).ready(function() {
+  var contentLastMarginLeft = 0;
+  $(".slider-click").click(function() {
+    var box = $(".slider-content");
+    var newValue = contentLastMarginLeft;
+    contentLastMarginLeft = box.css("margin-left");
+    box.animate({
+      "margin-left": newValue
+    }, 500);
+  });
+});
+
+
+
+
+
+
+
+		});
+
+
 $('.owl-carousel-main').owlCarousel({
     animateOut: 'fadeOut',
     loop:true,
@@ -70,7 +221,7 @@ $('#owl-carousel-product-list').owlCarousel({
 })
 
 
-$('.box').matchHeight();
+
 
 /*
     var $offCanvas = $('#offcanvas'),
@@ -84,66 +235,8 @@ $('.box').matchHeight();
 
 
 
-var topoffset = 90;
-// Animated Scrolling
-$('a[href*=#]:not([href=#])').click(function() {
-  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    if (target.length) {
-      $('html,body').animate({
-        scrollTop: target.offset().top-topoffset
-      }, 1000);
-      return false;
-    } // target.length
-  } //location hostname
-}); //on click
 
 
-// Init ScrollMagic Controller
-scrollMagicController = new ScrollMagic({
-  globalSceneOptions: {
-    triggerHook: "onLeave"
-  }
-});
-
-var tween = new TimelineMax();
-
-     tween.add([
-      TweenMax.to(".on-off", 0.2, {marginTop:70 }),
-     TweenMax.to(".button-language-container", 0.3, {height:50}),
-     TweenMax.to(".button-language-container", 0.3, {marginTop: -50}),
-     TweenMax.to(".navbar", 0.3, {height:50}),
-     TweenMax.to(".brand-container", 0.3, {height:50 }),
-     TweenMax.to(".brand-image", 0.2, {width:100, height:35 }),
-     TweenMax.to(".navmenu-brand", 0.3, {width:100, height:22 }),
-
-
-
-   ]);
-   tween.add([
-   ]);
-
-   scene = new ScrollScene({
-     offset: 50
-
-})
-.setTween(tween)
-.addTo(scrollMagicController);
-
-var scene3 = new ScrollScene({
-  offset: 50
-
-})
-.setClassToggle('.icon-bar:nth-of-type(2)', 'icon-bar-2')
-.addTo(scrollMagicController);
-/**/
-// button anim
-$(document).ready(function () {
-			  $(".navbar-toggle").on("click", function () {
-				    $(this).toggleClass("active");
-			  });
-		});
 
 $(".top-carousel-container .owl-prev, .top-carousel-container .owl-next, .top-carousel-container .btn-scroll, .top-carousel-container .hovereffect-2").hover(function(){
        $(".hover-content").addClass('hover-content-slide');
@@ -151,81 +244,3 @@ $(".top-carousel-container .owl-prev, .top-carousel-container .owl-next, .top-ca
     }, function(){
        $(".hover-content").removeClass('hover-content-slide');
     });
-
-// region classes
-$(".mask-1").hover(function(){
-       $(".region-left").addClass('region-open');
-       console.log("div was hovered");
-    }, function(){
-       $(".region-left").removeClass('region-open');
-    });
-
-$(".region-item:first-child .btn-default").hover(function(){
-       $(".region-left").addClass('region-open');
-       console.log("div was hovered");
-    }, function(){
-       $(".region-left").removeClass('region-open');
-    });
-
-$(".mask-2").hover(function(){
-       $(".region-right").addClass('region-open');
-       console.log("div was hovered");
-    }, function(){
-       $(".region-right").removeClass('region-open');
-    });
-
-$(".region-item:last-child .btn-default").hover(function(){
-       $(".region-right").addClass('region-open');
-       console.log("div was hovered");
-    }, function(){
-       $(".region-right").removeClass('region-open');
-    });
-// offcanvas
-$(document).ready(function () {
-  $('[data-toggle="offcanvas-2"]').click(function () {
-    $('.row-offcanvas').toggleClass('active')
-    $('.container-fluid.yellow-atelier').toggleClass('atelier-margin-top')
-    $('.btn-login').toggleClass('btn-close-white')
-  });
-});
-$('[data-toggle="product-item"]').click(function () {
-  $('.overlay-click').toggleClass('product-active')
-});
-$('[data-toggle="product-item-2"]').click(function () {
-  $('.overlay-click-2').toggleClass('product-active')
-  $('.owl-nav').toggleClass('fade-off')
-
-});
-$('[data-toggle="product-item-3"]').click(function () {
-  $('.overlay-click-2').toggleClass('product-active-active')
-});
-$('[data-toggle="product-item-4"]').click(function () {
-  $('.overlay-click-3').toggleClass('overlay-click-3-slide')
-});
-
-$('.slider-click').click(function () {
-  $('.slider-wrap').toggleClass('slider-wrap-open')
-});
-
-//window height
-var wheight = $(window).height(); //get height of the window
-
-$('.fullheight').css('height', wheight);
-
-$(window).resize(function() {
-  var wheight = $(window).height(); //get height of the window
-  $('.fullheight').css('height', wheight);
-}) //on resize
-
-
-$(document).ready(function() {
-  var contentLastMarginLeft = 0;
-  $(".slider-click").click(function() {
-    var box = $(".slider-content");
-    var newValue = contentLastMarginLeft;
-    contentLastMarginLeft = box.css("margin-left");
-    box.animate({
-      "margin-left": newValue
-    }, 500);
-  });
-});

@@ -233,7 +233,7 @@ h1 {
 
 /*-------------------------------------------
 offcanvas
--------------------------------------------*/
+-------------------------------------------
 @media screen and (min-width: 767px) {
 
   .row-offcanvas-right {
@@ -243,7 +243,7 @@ offcanvas
   .sidebar-offcanvas {
     position: absolute;
     top: 0px;
-    width: 100%; /* 6 columns */
+    width: 100%; /* 6 columns
   }
 }
 @media screen and (max-width: 768px) {
@@ -271,25 +271,25 @@ offcanvas
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
+    left: -50%; /* 6 columns
   }
 
   .row-offcanvas-right.active {
-    top: 0px; /* 6 columns */
+    top: 0px;  6 columns
     left: 0px;
   }
 
   .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
+    left: 50%;  6 columns
   }
 
   .sidebar-offcanvas {
     position: absolute;
     top: 0px;
-    width: 100%; /* 6 columns */
+    width: 100%;  6 columns
   }
 }
-
+*/
 }
 .one-product-selected {
   .hovereffect {

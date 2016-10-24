@@ -3,6 +3,9 @@
 /*-------------------------------------------
 leading story
 -------------------------------------------*/
+.more-margin {
+  margin-bottom: 30px;
+}
 .container-fluid.load-more  {
   background-color: $color-secondary;
   .container {
@@ -122,7 +125,8 @@ leading story
     margin-top:  50px;
     margin-bottom: 50px;
     font-family: $font-primary-book;
-    font-size: 35px;
+    font-size: 32px;
+    padding: 0 20px;
     span:nth-of-type(1) {
       font-family: $font-primary-bold;
     }
@@ -131,6 +135,7 @@ leading story
     }
     @media (min-width: 768px) {
       font-size: 50px;
+      padding: 0;
       }
   }
   h3, p {
@@ -284,7 +289,6 @@ align-items: center;
       top: 3px;
     }
   }
-
 }
 
 
@@ -303,7 +307,8 @@ align-items: center;
     }
 
   }*/
-  .leading-story-article {
+  .leading-story-article, .leading-story-one-article {
+
     position: relative;
     padding-top: 15px;
     .social-icons.social-icons-transparent {
@@ -359,6 +364,55 @@ align-items: center;
       z-index: 55;
     }
   }
+  .leading-story-one-article {
+  @media (min-width: 768px) {
+    top: -515px;
+  }
+  .magazine-article-top .selectors-container {
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+}
+.selectors-container .selector-container {
+    margin: 0 10px 15px 0px ;
+}
+.social-icons.social-icons-transparent {
+  position: absolute !important;
+  top: 165 !important;
+  right: 0 !important;
+  opacity: .5 !important;
+}
+
+.magazine-article-top {
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+  h1 {
+    width: 100%;
+    color: $color-black;
+    font-size: 24px;
+    font-family: $font-primary;
+    line-height: 1.1;
+    margin-bottom: 15px;
+      @media (min-width: 768px) {
+    color: $color-white;
+    font-family: $font-primary-book;
+    font-size: 38px;
+    line-height: 135%;
+    margin-bottom: 30px;
+  }
+  }
+  small {
+    color: $color-black ;
+    @media (min-width: 768px) {
+      color: $color-white;
+    }
+  }
+}
+  }
+
   .week {
     width: 90px;
     height: 28px;
@@ -550,7 +604,29 @@ position: relative;
 .img-responsive {
   width: 100%;
   @media (min-width: 1280px) {
-  height: auto !important;
+  height: auto;
+    }
+  }
+  .hovereffect-image {
+    .img-responsive  {
+      height: auto;
+      @media (min-width: 980px){
+      height: 200px;
+        }
+      @media (min-width: 1280px) {
+        height: 238px;
+      }
+    }
+  }
+  .image-height{
+    .img-responsive {
+      @media (min-width: 980px){
+      height: 400px;
+        }
+      @media (min-width: 1280px) {
+        height: 476px;
+      }
+
     }
   }
 }
@@ -603,7 +679,10 @@ offcanvas
 magazine article
 -------------------------------------------*/
 .leading-magazine-story {
-  margin-bottom: 96px;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    margin-bottom: 96px;
+  }
   .row:first-child {
     height: 100%;
   }
@@ -648,10 +727,13 @@ magazine article
 }
 .yellow-magazine-article-magazine {
   .yellow-box-1  {
-    width: 76.2%;
+    width: 100%;
     height: 100%;
     top: 0px;
     right: 0px;
+    @media (min-width: 768px) {
+      width: 76.2%;
+    }
     }
 }
 .magazine-article {
@@ -659,7 +741,10 @@ magazine article
 
 }
 .magazine-reach-out {
-  margin-top: 100px;
+  margin-top: 0px;
+  @media (min-width: 768px) {
+    margin-top: 100px;
+  }
   background-color: $color-secondary;
   .social-opening .social-icons .fa {
     background: $color-white;
@@ -673,29 +758,49 @@ magazine article
   margin-bottom: 0px;
 }
 .magazine-article-text {
+  img {
+    width: 100%;
+    @media (min-width: 768px) {
+      width: auto;
+       }
+
+  }
   .img-responsive {
     width: 100%;
   }
   .caption {
     background-color: $color-secondary;
     padding-top: 0px;
+    img {
+      width: 100%;
+      @media (min-width: 768px) {
+        width: auto;
+         }
+    }
     p {
       @include linkSmall;
       line-height: 120%;
-      width: 80%;
+      width: 95%;
       padding: 15px 0 0 15px;
+      margin-bottom: 15px;
+      @media (min-width: 768px) {
+        margin-bottom: 0px;
+      }
       @media (min-width: 980px) {
         padding: 15px 0 0 15px;
        }
 
       @media (min-width: 1280px) {
-        padding: 10px 0 0 20px;
+        padding: 10px 0 0 15px;
        }
 
     }
   }
   p {
-    margin-bottom: 75px;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+      margin-bottom: 75px;
+    }
   }
   h4 {
     margin-top: 0px;
@@ -717,44 +822,101 @@ magazine article
       margin-bottom:0px;
     }
   }
+  .title-bottom {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      display: block
+    }
+    .col-xs-12:nth-of-type(1) {
+      order: 2;
+    }
+  }
 }
 .yellow-box-magazine-article {
   .yellow-box.yellow-box-1 {
-    width: 30%;
-    height: 100%;
-    top: -10px;
-    right: 0px;
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      width: 25%;
+      height: 100.5%;
+      top: -10px;
+      right: 0px;
+    }
   }
   .yellow-box-2 {
-    width: 26%;
-    height: 100%;
-    top: 0px;
-    right: 0px;
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      width: 26%;
+      height: 100%;
+      top: 0px;
+      right: 0px;
+    }
 }
 .yellow-box-4 {
     height: 100%;
     left: 0;
-    width: 50%;
+    width: 100%;
+      @media (min-width: 768px) {
+            width: 50%;
+      }
   }
   .yellow-box.yellow-box-5 {
       height: 100%;
       right: 0;
-      width: 50%;
-      top: 0px
+      width: 100%;
+      top: 0px;
+      @media (min-width: 768px) {
+            width: 50%;
+      }
+
     }
 
 }
 .left-1 {
+  margin-left: 0px;
+  @media (min-width: 768px) {
 margin-left: 20px;
+}
 }
 
 .left-2  {
-  margin-left: 75px;
+  margin-left: 0px;
+  margin-bottom: 15px !important;
+  @media (min-width: 768px) {
+    margin-left: 45px;
+     }
+     @media (min-width: 980px) {
+       margin-left: 45px;
+        }
+        @media (min-width: 1200px) {
+          margin-left: 85px;
+           }
+
+
+}
+.title-bottom {
+  .col-xs-12:first-child {
+    display: block;
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: flex-end;
+
+    }
+  }
+  p {
+    padding: 15px 15px 0 15px !important;
+  }
 }
 .magazine-article-picture, .magazine-article-picture-left, .atelier-article-picture {
   //background-color: $color-secondary;
-  margin-top: 100px;
-  margin-bottom: 95px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  @media (min-width: 768px) {
+    margin-top: 100px;
+    margin-bottom: 95px;
+  }
   img {
     width: 100%;
 
@@ -769,7 +931,10 @@ margin-left: 20px;
     p {
       @include linkSmall;
       line-height: 120%;
-      width: 80%;
+      width: 95%;
+      @media (min-width: 768px) {
+        width: 80%;
+      }
     }
   }
 }
@@ -784,7 +949,10 @@ background-image: url(../images/atelier/social/code-atelier-atelier-social-03.jp
   }
 }
 .margin-bottom-article {
+  margin-bottom: 30px;
+  @media (min-width: 1280px) {
   margin-bottom: 95px;
+}
 }
 .widget-story {
   p {
@@ -800,5 +968,52 @@ background-image: url(../images/atelier/social/code-atelier-atelier-social-03.jp
   }
 }
 .widget-story-bottom {
-  margin: 90px 0 100px 0 ;
+  margin:  20px 0 30px 0;
+  @media (min-width: 1280px) {
+  margin: 90px 0 100px 0;
+}
+}
+.navi {
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+  margin-bottom: 100px;
+}
+  a {
+    font-size: 13px;
+    color: $color-black;
+    line-height: 100%;
+    font-family: $font-primary-book;
+    text-transform: uppercase;
+  }
+  .pull-left {
+    margin-left: 38px;
+  }
+  .pull-right {
+    margin-right: 38px;
+    text-align: right;
+  }
+
+  .pull-left a:before,  .pull-right a:before{
+    display: block;
+    content: " ";
+    width: 35px;
+    height: 67px;
+    position: absolute;
+    top: -10px;
+    background-image: url(../images/code-spritesheet.svg);
+    background-size: 177px 343px;
+
+    }
+    .pull-left a:before {
+      background-position: -53px -06px;
+      background-repeat: no-repeat;
+      left: -38px;
+    }
+    .pull-right a:before {
+      background-position: -110px -06px;
+      background-repeat: no-repeat;
+      right: -38px;
+
+    }
+
 }
